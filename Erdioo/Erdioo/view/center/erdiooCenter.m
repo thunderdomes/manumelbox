@@ -129,6 +129,34 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	return  79;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  topViewObject  *object_draw=[erdio objectAtIndex:indexPath.row];
+	//[self stream:[NSString stringWithFormat:@"%@",[object_draw.IdRadio]];
+	[self stream:object_draw.IdRadio];
+	
+}
+-(void)stream:(NSString*)radioNumber{
+	NSString * sURL = [NSString stringWithFormat:@"%@?id=%@&key=%@",Global_url,radioNumber,API_key];
+	
+	NSURL *URL=[NSURL URLWithString:sURL];
+	NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
+	
+    AFJSONRequestOperation *operation=[[[AFJSONRequestOperation alloc] initWithRequest:request] autorelease];
+	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+	
+    //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
+	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSLog(@"response object---->%@",[responseObject objectForKey:@"URLStreaming"]);
+	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		if(error){
+		}
+        NSLog(@"error: %@", [error description]);
+		
+	}];
+	[operation start];
+
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
