@@ -28,6 +28,7 @@
 		D07266A3175E6AE400BA64C0 /* navbar2-kanan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D07266A2175E6AE400BA64C0 /* navbar2-kanan@2x.png */; };
 		D07266A7175E6B0900BA64C0 /* search.m in Sources */ = {isa = PBXBuildFile; fileRef = D07266A6175E6B0900BA64C0 /* search.m */; };
 		D07266A9175E6D3A00BA64C0 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D07266A8175E6D3A00BA64C0 /* cancel@2x.png */; };
+		D07266AD175E80BA00BA64C0 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D07266AC175E80BA00BA64C0 /* AudioStreamer.m */; };
 		D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC4175DACF5008A7F81 /* UIKit.framework */; };
 		D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC6175DACF5008A7F81 /* Foundation.framework */; };
 		D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */; };
@@ -79,6 +80,8 @@
 		D07266A5175E6B0900BA64C0 /* search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = search.h; sourceTree = "<group>"; };
 		D07266A6175E6B0900BA64C0 /* search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = search.m; sourceTree = "<group>"; };
 		D07266A8175E6D3A00BA64C0 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		D07266AB175E80BA00BA64C0 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		D07266AC175E80BA00BA64C0 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
 		D0C35AC1175DACF5008A7F81 /* Erdioo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erdioo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C35AC4175DACF5008A7F81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0C35AC6175DACF5008A7F81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -178,6 +181,15 @@
 			path = search;
 			sourceTree = "<group>";
 		};
+		D07266AA175E80B900BA64C0 /* Streamer */ = {
+			isa = PBXGroup;
+			children = (
+				D07266AB175E80BA00BA64C0 /* AudioStreamer.h */,
+				D07266AC175E80BA00BA64C0 /* AudioStreamer.m */,
+			);
+			path = Streamer;
+			sourceTree = "<group>";
+		};
 		D0C35AB8175DACF5008A7F81 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +261,7 @@
 		D0C35AE3175DD315008A7F81 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				D07266AA175E80B900BA64C0 /* Streamer */,
 				D0726692175E60E400BA64C0 /* JASidePanels */,
 				D072666C175E3E7200BA64C0 /* AFNetworking */,
 				D0C35AE6175DD38D008A7F81 /* common */,
@@ -383,6 +396,7 @@
 				D0726698175E60E400BA64C0 /* UIViewController+JASidePanel.m in Sources */,
 				D072669C175E61A600BA64C0 /* erdioLeft.m in Sources */,
 				D07266A7175E6B0900BA64C0 /* search.m in Sources */,
+				D07266AD175E80BA00BA64C0 /* AudioStreamer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

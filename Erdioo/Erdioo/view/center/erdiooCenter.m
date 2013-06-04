@@ -26,8 +26,9 @@
 		erdiooCenter_table=[[UITableView alloc]init];
 		erdiooCenter_table.delegate=self;
 		erdiooCenter_table.dataSource=self;
+		[erdiooCenter_table setSeparatorColor:[UIColor colorWithRed:0.875 green:0.875 blue:0.875 alpha:1]];
 		erdiooCenter_table.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-44);
-		[erdiooCenter_table setSeparatorColor:[UIColor clearColor]];
+		//[erdiooCenter_table setSeparatorColor:[UIColor clearColor]];
 		erdiooCenter_table.backgroundColor=[UIColor clearColor];
 		[self.view addSubview:erdiooCenter_table];
 		[self fetchData];
@@ -110,7 +111,12 @@
     if (cell == nil) {
         cell = [[[errdioCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
- 
+ 	if(indexPath.row % 2==0){
+		cell.wrapper.backgroundColor=[UIColor colorWithRed:0.961 green:0.961 blue:0.961 alpha:1];
+	}
+	else{
+		cell.wrapper.backgroundColor=[UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1];
+	}
 	
 	cell.RadioName.text = object_draw.NamaRadio;
 	
@@ -121,7 +127,7 @@
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	return  95;
+	return  79;
 }
 - (void)viewDidLoad
 {
