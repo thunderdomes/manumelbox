@@ -11,6 +11,11 @@
 @interface atta : NSObject
 //global variable
 extern NSString * const AppName;
-#define globalColor [UIColor colorWithRed:0.937 green:0.937 blue:0.937 alpha:1]
+extern NSString * const API_key;
+extern NSString * const Global_url;
 
+#define lightGray [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1] 
+
+//global image define
+extern NSString * const navbar;
 @end

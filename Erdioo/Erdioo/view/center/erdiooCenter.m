@@ -19,8 +19,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-		self.view.backgroundColor=globalColor;
-		self.title=AppName;
+		self.view.backgroundColor=lightGray;
+		self.title=API_key;
     }
     return self;
 }

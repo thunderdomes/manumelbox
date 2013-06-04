@@ -24,6 +24,10 @@
 	UINavigationController *a=[[UINavigationController alloc]initWithRootViewController:erdioMain];
     self.window.rootViewController=a;
     [self.window makeKeyAndVisible];
+	
+	UINavigationBar *navBar = [a navigationBar];
+	UIImage *backgroundImage = [UIImage imageNamed:navbar];
+	[navBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
     return YES;
 }
 
