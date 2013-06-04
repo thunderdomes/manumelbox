@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface erdiooCenter : UIViewController
-
+@interface erdiooCenter : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+	NSMutableArray *erdio;
+}
+@property (nonatomic,strong)UITableView *erdiooCenter_table;
 @end
