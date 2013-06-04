@@ -94,7 +94,7 @@
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	return  85;
+	return  95;
 }
 - (void)viewDidLoad
 {

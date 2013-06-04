@@ -12,6 +12,8 @@
 @synthesize wrapper=_wrapper;
 @synthesize RadioName=_RadioName;
 @synthesize Genre=_Genre;
+@synthesize location=_location;
+@synthesize location_text=_location_text;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -19,7 +21,7 @@
     if (self) {
         // Initialization code
 		_wrapper=[[UIView alloc]init];
-		_wrapper.frame=CGRectMake(10, 5, 300, 69);
+		_wrapper.frame=CGRectMake(10, 5, 300, 79);
 		_wrapper.backgroundColor=cell_color;
 		_wrapper.layer.borderColor = cell_border.CGColor;
 		_wrapper.layer.borderWidth = 1.0f;
@@ -46,9 +48,23 @@
 		_Genre.lineBreakMode=NSLineBreakByCharWrapping;
 		_Genre.textColor=dark_gray;
 		
+		_location_text=[[UILabel alloc]init];
+		_location_text.backgroundColor=[UIColor clearColor];
+		_location_text.frame=CGRectMake(105, 47, 180, 20);
+		_location_text.font=global_font_medium_light;
+		_location_text.lineBreakMode=NSLineBreakByCharWrapping;
+		_location_text.textColor=dark_gray;
+		_location_text.text=@"Indonesia";
+
+		
+		_location=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"location_small"]];
+		_location.frame=CGRectMake(90, 50, 14, 14);
+		_location.backgroundColor=[UIColor clearColor];
 		
 		[_wrapper addSubview:_RadioName];
+		[_wrapper addSubview:_location];
 		[_wrapper addSubview:_Genre];
+		[_wrapper addSubview:_location_text];
 		[self.contentView addSubview:_wrapper];
     }
     return self;
