@@ -25,7 +25,7 @@
 		_wrapper.backgroundColor=cell_color;
 		_wrapper.layer.borderColor = cell_border.CGColor;
 		_wrapper.layer.borderWidth = 1.0f;
-		_wrapper.layer.cornerRadius = 5;
+		_wrapper.layer.cornerRadius = 3;
 		[_wrapper.layer setShadowColor:cell_border.CGColor];
 		[_wrapper.layer setShadowOpacity:0.8];
 		[_wrapper.layer setShadowRadius:1.0];
