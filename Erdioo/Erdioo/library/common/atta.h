@@ -20,6 +20,8 @@ extern NSString * const top_radio;
 #define dark_gray   [UIColor colorWithRed:0.341 green:0.341 blue:0.357 alpha:1]
 #define cell_border [UIColor colorWithRed:0.792 green:0.796 blue:0.812 alpha:1]
 
+#define darkest [UIColor colorWithRed:0.153 green:0.169 blue:0.2 alpha:1]
+
 ////font
 #define global_font_bold [UIFont fontWithName:@"HelveticaNeue-Bold" size:15] 
 

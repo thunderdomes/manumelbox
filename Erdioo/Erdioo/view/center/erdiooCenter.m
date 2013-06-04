@@ -18,6 +18,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		searchWindow=[[search alloc]init];
 		self.view.backgroundColor=lightGray;
 		self.title=AppName;
 		erdio=[[NSMutableArray alloc]init];
@@ -31,9 +32,35 @@
 		[self.view addSubview:erdiooCenter_table];
 		[self fetchData];
 		
+		UIImage* image3 = [UIImage imageNamed:@"search"];
+		CGRect frame3 = CGRectMake(50, 0, 44, 44);
+		UIButton *searchbutton = [[UIButton alloc] initWithFrame:frame3];
+		[searchbutton setBackgroundImage:image3 forState:UIControlStateNormal];
+		//[searchbutton setBackgroundImage:[UIImage imageNamed:@"search-button-pressed"] forState:UIControlStateHighlighted];
+		[searchbutton addTarget:self action:@selector(searchRadio) forControlEvents:UIControlEventTouchUpInside];
+		
+		UIView *RightbuttonView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 88, 44)];
+		RightbuttonView.backgroundColor=[UIColor clearColor];
+		[RightbuttonView addSubview:searchbutton];
+		
+		
+		UIBarButtonItem* rightbarButton = [[UIBarButtonItem alloc] initWithCustomView:RightbuttonView];
+		
+		
+		[self.navigationItem setRightBarButtonItem:rightbarButton];
+		
+		
+		[rightbarButton release];
+
+		
     }
 	
     return self;
+}
+-(void)searchRadio{
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:searchWindow];
+	[self.navigationController presentModalViewController:navigationController animated:YES];
+	
 }
 -(void)fetchData{
 	[erdio removeAllObjects];
@@ -88,8 +115,8 @@
 	cell.RadioName.text = object_draw.NamaRadio;
 	
 	cell.Genre.text = object_draw.Genre;
-	
-	//cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+	cell.selectionStyle=UITableViewCellSelectionStyleNone;
 	
     return cell;
 }

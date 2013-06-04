@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "search.h"
 @interface erdiooCenter : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
 	NSMutableArray *erdio;
+	search *searchWindow;
 }
 @property (nonatomic,strong)UITableView *erdiooCenter_table;
 @end

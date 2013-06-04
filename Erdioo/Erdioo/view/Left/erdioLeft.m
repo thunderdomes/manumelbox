@@ -18,6 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+		self.view.backgroundColor=darkest;
         // Custom initialization
     }
     return self;
