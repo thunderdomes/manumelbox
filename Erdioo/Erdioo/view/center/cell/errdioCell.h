@@ -14,4 +14,5 @@
 @property (nonatomic,strong) UIView *wrapper;
 @property (nonatomic,strong) UIImageView *location;
 @property(nonatomic,strong) UILabel *location_text;
+
 @end

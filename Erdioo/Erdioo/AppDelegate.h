@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@class erdiooCenter;
+#import "erdiooCenter.h"
+@class JASidePanelController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 
+@property (strong, nonatomic) erdiooCenter *erdioMain;
+@property (strong, nonatomic) JASidePanelController *viewController;
 @end

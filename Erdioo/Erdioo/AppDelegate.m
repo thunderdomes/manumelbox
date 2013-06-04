@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "JASidePanelController.h"
 #import "erdiooCenter.h"
+#import "erdioLeft.h"
 @implementation AppDelegate
 
 - (void)dealloc
@@ -20,14 +22,15 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-	erdiooCenter *erdioMain=[[erdiooCenter alloc]init];
-	UINavigationController *a=[[UINavigationController alloc]initWithRootViewController:erdioMain];
-    self.window.rootViewController=a;
+	self.viewController = [[JASidePanelController alloc] init];
+	self.viewController.leftPanel = [[erdioLeft alloc] init];
+    self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdiooCenter alloc] init]];
     [self.window makeKeyAndVisible];
 	
-	UINavigationBar *navBar = [a navigationBar];
-	UIImage *backgroundImage = [UIImage imageNamed:navbar];
-	[navBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+	//UINavigationBar *navBar = [erdiooCenter navigationBar];
+	//UIImage *backgroundImage = [UIImage imageNamed:navbar];
+	//[navBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+	self.window.rootViewController = self.viewController;
     return YES;
 }
 

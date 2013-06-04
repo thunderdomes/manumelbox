@@ -20,6 +20,10 @@
 		D072668B175E463F00BA64C0 /* topViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D072668A175E463F00BA64C0 /* topViewObject.m */; };
 		D072668F175E4C4B00BA64C0 /* errdioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D072668E175E4C4B00BA64C0 /* errdioCell.m */; };
 		D0726691175E59D400BA64C0 /* location_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0726690175E59D400BA64C0 /* location_small@2x.png */; };
+		D0726697175E60E400BA64C0 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0726694175E60E400BA64C0 /* JASidePanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0726698175E60E400BA64C0 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0726696175E60E400BA64C0 /* UIViewController+JASidePanel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D072669C175E61A600BA64C0 /* erdioLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = D072669B175E61A600BA64C0 /* erdioLeft.m */; };
+		D072669F175E63C700BA64C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D072669D175E63BE00BA64C0 /* QuartzCore.framework */; };
 		D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC4175DACF5008A7F81 /* UIKit.framework */; };
 		D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC6175DACF5008A7F81 /* Foundation.framework */; };
 		D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */; };
@@ -59,6 +63,13 @@
 		D072668D175E4C4B00BA64C0 /* errdioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errdioCell.h; sourceTree = "<group>"; };
 		D072668E175E4C4B00BA64C0 /* errdioCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = errdioCell.m; sourceTree = "<group>"; };
 		D0726690175E59D400BA64C0 /* location_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_small@2x.png"; sourceTree = "<group>"; };
+		D0726693175E60E400BA64C0 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		D0726694175E60E400BA64C0 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
+		D0726695175E60E400BA64C0 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		D0726696175E60E400BA64C0 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
+		D072669A175E61A600BA64C0 /* erdioLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erdioLeft.h; sourceTree = "<group>"; };
+		D072669B175E61A600BA64C0 /* erdioLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erdioLeft.m; sourceTree = "<group>"; };
+		D072669D175E63BE00BA64C0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0C35AC1175DACF5008A7F81 /* Erdioo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erdioo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C35AC4175DACF5008A7F81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0C35AC6175DACF5008A7F81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +96,7 @@
 			files = (
 				D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */,
 				D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */,
+				D072669F175E63C700BA64C0 /* QuartzCore.framework in Frameworks */,
 				D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +139,27 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		D0726692175E60E400BA64C0 /* JASidePanels */ = {
+			isa = PBXGroup;
+			children = (
+				D0726693175E60E400BA64C0 /* JASidePanelController.h */,
+				D0726694175E60E400BA64C0 /* JASidePanelController.m */,
+				D0726695175E60E400BA64C0 /* UIViewController+JASidePanel.h */,
+				D0726696175E60E400BA64C0 /* UIViewController+JASidePanel.m */,
+			);
+			name = JASidePanels;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D0726699175E618E00BA64C0 /* Left */ = {
+			isa = PBXGroup;
+			children = (
+				D072669A175E61A600BA64C0 /* erdioLeft.h */,
+				D072669B175E61A600BA64C0 /* erdioLeft.m */,
+			);
+			path = Left;
+			sourceTree = "<group>";
+		};
 		D0C35AB8175DACF5008A7F81 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +180,7 @@
 		D0C35AC3175DACF5008A7F81 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D072669D175E63BE00BA64C0 /* QuartzCore.framework */,
 				D0C35AC4175DACF5008A7F81 /* UIKit.framework */,
 				D0C35AC6175DACF5008A7F81 /* Foundation.framework */,
 				D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */,
@@ -194,6 +228,7 @@
 		D0C35AE3175DD315008A7F81 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				D0726692175E60E400BA64C0 /* JASidePanels */,
 				D072666C175E3E7200BA64C0 /* AFNetworking */,
 				D0C35AE6175DD38D008A7F81 /* common */,
 			);
@@ -210,6 +245,7 @@
 		D0C35AE5175DD315008A7F81 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D0726699175E618E00BA64C0 /* Left */,
 				D0C35AEA175DD91E008A7F81 /* center */,
 			);
 			path = view;
@@ -318,6 +354,9 @@
 				D0726688175E3E7200BA64C0 /* UIImageView+AFNetworking.m in Sources */,
 				D072668B175E463F00BA64C0 /* topViewObject.m in Sources */,
 				D072668F175E4C4B00BA64C0 /* errdioCell.m in Sources */,
+				D0726697175E60E400BA64C0 /* JASidePanelController.m in Sources */,
+				D0726698175E60E400BA64C0 /* UIViewController+JASidePanel.m in Sources */,
+				D072669C175E61A600BA64C0 /* erdioLeft.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
