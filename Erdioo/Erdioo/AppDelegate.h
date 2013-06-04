@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class erdiooCenter;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end

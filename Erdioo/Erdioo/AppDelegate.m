@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "erdiooCenter.h"
 @implementation AppDelegate
 
 - (void)dealloc
@@ -20,7 +20,9 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+	erdiooCenter *erdioMain=[[erdiooCenter alloc]init];
+	UINavigationController *a=[[UINavigationController alloc]initWithRootViewController:erdioMain];
+    self.window.rootViewController=a;
     [self.window makeKeyAndVisible];
     return YES;
 }

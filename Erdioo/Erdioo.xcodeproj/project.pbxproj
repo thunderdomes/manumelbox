@@ -16,6 +16,8 @@
 		D0C35AD7175DACF5008A7F81 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35AD6175DACF5008A7F81 /* Default.png */; };
 		D0C35AD9175DACF5008A7F81 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35AD8175DACF5008A7F81 /* Default@2x.png */; };
 		D0C35ADB175DACF5008A7F81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */; };
+		D0C35AE9175DD3C1008A7F81 /* atta.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C35AE8175DD3C1008A7F81 /* atta.m */; };
+		D0C35AED175DD99E008A7F81 /* erdiooCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C35AEC175DD99E008A7F81 /* erdiooCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		D0C35AD6175DACF5008A7F81 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D0C35AD8175DACF5008A7F81 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D0C35AE7175DD3C1008A7F81 /* atta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atta.h; sourceTree = "<group>"; };
+		D0C35AE8175DD3C1008A7F81 /* atta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = atta.m; sourceTree = "<group>"; };
+		D0C35AEB175DD99E008A7F81 /* erdiooCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erdiooCenter.h; sourceTree = "<group>"; };
+		D0C35AEC175DD99E008A7F81 /* erdiooCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erdiooCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,10 @@
 		D0C35ACA175DACF5008A7F81 /* Erdioo */ = {
 			isa = PBXGroup;
 			children = (
+				D0C35AE2175DD315008A7F81 /* image */,
+				D0C35AE3175DD315008A7F81 /* library */,
+				D0C35AE4175DD315008A7F81 /* model */,
+				D0C35AE5175DD315008A7F81 /* view */,
 				D0C35AD3175DACF5008A7F81 /* AppDelegate.h */,
 				D0C35AD4175DACF5008A7F81 /* AppDelegate.m */,
 				D0C35ACB175DACF5008A7F81 /* Supporting Files */,
@@ -97,6 +107,54 @@
 				D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0C35AE2175DD315008A7F81 /* image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		D0C35AE3175DD315008A7F81 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				D0C35AE6175DD38D008A7F81 /* common */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
+		D0C35AE4175DD315008A7F81 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D0C35AE5175DD315008A7F81 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D0C35AEA175DD91E008A7F81 /* center */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D0C35AE6175DD38D008A7F81 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D0C35AE7175DD3C1008A7F81 /* atta.h */,
+				D0C35AE8175DD3C1008A7F81 /* atta.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		D0C35AEA175DD91E008A7F81 /* center */ = {
+			isa = PBXGroup;
+			children = (
+				D0C35AEB175DD99E008A7F81 /* erdiooCenter.h */,
+				D0C35AEC175DD99E008A7F81 /* erdiooCenter.m */,
+			);
+			path = center;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +224,8 @@
 			files = (
 				D0C35AD1175DACF5008A7F81 /* main.m in Sources */,
 				D0C35AD5175DACF5008A7F81 /* AppDelegate.m in Sources */,
+				D0C35AE9175DD3C1008A7F81 /* atta.m in Sources */,
+				D0C35AED175DD99E008A7F81 /* erdiooCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +303,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Erdioo/Erdioo-Prefix.pch";
 				INFOPLIST_FILE = "Erdioo/Erdioo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -254,6 +315,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Erdioo/Erdioo-Prefix.pch";
 				INFOPLIST_FILE = "Erdioo/Erdioo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
