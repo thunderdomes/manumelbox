@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC4175DACF5008A7F81 /* UIKit.framework */; };
+		D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC6175DACF5008A7F81 /* Foundation.framework */; };
+		D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */; };
+		D0C35ACF175DACF5008A7F81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0C35ACD175DACF5008A7F81 /* InfoPlist.strings */; };
+		D0C35AD1175DACF5008A7F81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C35AD0175DACF5008A7F81 /* main.m */; };
+		D0C35AD5175DACF5008A7F81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C35AD4175DACF5008A7F81 /* AppDelegate.m */; };
+		D0C35AD7175DACF5008A7F81 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35AD6175DACF5008A7F81 /* Default.png */; };
+		D0C35AD9175DACF5008A7F81 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35AD8175DACF5008A7F81 /* Default@2x.png */; };
+		D0C35ADB175DACF5008A7F81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D0C35AC1175DACF5008A7F81 /* Erdioo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erdioo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C35AC4175DACF5008A7F81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0C35AC6175DACF5008A7F81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0C35ACC175DACF5008A7F81 /* Erdioo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Erdioo-Info.plist"; sourceTree = "<group>"; };
+		D0C35ACE175DACF5008A7F81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0C35AD0175DACF5008A7F81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0C35AD2175DACF5008A7F81 /* Erdioo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Erdioo-Prefix.pch"; sourceTree = "<group>"; };
+		D0C35AD3175DACF5008A7F81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0C35AD4175DACF5008A7F81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0C35AD6175DACF5008A7F81 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D0C35AD8175DACF5008A7F81 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0C35ABE175DACF5008A7F81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */,
+				D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */,
+				D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0C35AB8175DACF5008A7F81 = {
+			isa = PBXGroup;
+			children = (
+				D0C35ACA175DACF5008A7F81 /* Erdioo */,
+				D0C35AC3175DACF5008A7F81 /* Frameworks */,
+				D0C35AC2175DACF5008A7F81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0C35AC2175DACF5008A7F81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0C35AC1175DACF5008A7F81 /* Erdioo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0C35AC3175DACF5008A7F81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0C35AC4175DACF5008A7F81 /* UIKit.framework */,
+				D0C35AC6175DACF5008A7F81 /* Foundation.framework */,
+				D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0C35ACA175DACF5008A7F81 /* Erdioo */ = {
+			isa = PBXGroup;
+			children = (
+				D0C35AD3175DACF5008A7F81 /* AppDelegate.h */,
+				D0C35AD4175DACF5008A7F81 /* AppDelegate.m */,
+				D0C35ACB175DACF5008A7F81 /* Supporting Files */,
+			);
+			path = Erdioo;
+			sourceTree = "<group>";
+		};
+		D0C35ACB175DACF5008A7F81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0C35ACC175DACF5008A7F81 /* Erdioo-Info.plist */,
+				D0C35ACD175DACF5008A7F81 /* InfoPlist.strings */,
+				D0C35AD0175DACF5008A7F81 /* main.m */,
+				D0C35AD2175DACF5008A7F81 /* Erdioo-Prefix.pch */,
+				D0C35AD6175DACF5008A7F81 /* Default.png */,
+				D0C35AD8175DACF5008A7F81 /* Default@2x.png */,
+				D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0C35AC0175DACF5008A7F81 /* Erdioo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C35ADE175DACF5008A7F81 /* Build configuration list for PBXNativeTarget "Erdioo" */;
+			buildPhases = (
+				D0C35ABD175DACF5008A7F81 /* Sources */,
+				D0C35ABE175DACF5008A7F81 /* Frameworks */,
+				D0C35ABF175DACF5008A7F81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Erdioo;
+			productName = Erdioo;
+			productReference = D0C35AC1175DACF5008A7F81 /* Erdioo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0C35AB9175DACF5008A7F81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = kumel;
+			};
+			buildConfigurationList = D0C35ABC175DACF5008A7F81 /* Build configuration list for PBXProject "Erdioo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0C35AB8175DACF5008A7F81;
+			productRefGroup = D0C35AC2175DACF5008A7F81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0C35AC0175DACF5008A7F81 /* Erdioo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0C35ABF175DACF5008A7F81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C35ACF175DACF5008A7F81 /* InfoPlist.strings in Resources */,
+				D0C35AD7175DACF5008A7F81 /* Default.png in Resources */,
+				D0C35AD9175DACF5008A7F81 /* Default@2x.png in Resources */,
+				D0C35ADB175DACF5008A7F81 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0C35ABD175DACF5008A7F81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C35AD1175DACF5008A7F81 /* main.m in Sources */,
+				D0C35AD5175DACF5008A7F81 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0C35ACD175DACF5008A7F81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C35ACE175DACF5008A7F81 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0C35ADC175DACF5008A7F81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0C35ADD175DACF5008A7F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0C35ADF175DACF5008A7F81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Erdioo/Erdioo-Prefix.pch";
+				INFOPLIST_FILE = "Erdioo/Erdioo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0C35AE0175DACF5008A7F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Erdioo/Erdioo-Prefix.pch";
+				INFOPLIST_FILE = "Erdioo/Erdioo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0C35ABC175DACF5008A7F81 /* Build configuration list for PBXProject "Erdioo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C35ADC175DACF5008A7F81 /* Debug */,
+				D0C35ADD175DACF5008A7F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C35ADE175DACF5008A7F81 /* Build configuration list for PBXNativeTarget "Erdioo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C35ADF175DACF5008A7F81 /* Debug */,
+				D0C35AE0175DACF5008A7F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0C35AB9175DACF5008A7F81 /* Project object */;
+}
