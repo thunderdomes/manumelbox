@@ -17,4 +17,5 @@
 #import "topViewObject.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AudioStreamer.h"
+#import "UIViewController+JASidePanel.h"
 #endif

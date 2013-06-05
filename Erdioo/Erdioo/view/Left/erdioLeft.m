@@ -19,17 +19,39 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor=darkest;
-		;
+		
         // Custom initialization
 		leftMenu=[[UITableView alloc]init];
 		leftMenu.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 		leftMenu.backgroundColor=[UIColor clearColor];
 		leftMenu.separatorColor=left_separator;
+		leftMenu.dataSource=self;
+		leftMenu.delegate=self;
 		[self.view addSubview:leftMenu];
+		
+		menuLeft=[[NSMutableArray alloc]init];
+		[menuLeft addObject:@"Top Radio"];
+		[menuLeft addObject:@"My Saved Radio"];
+		[menuLeft addObject:@"regional Radio"];
+		[menuLeft addObject:@"About Us"];
     }
     return self;
 }
-
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return menuLeft.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+	
+	cell.textLabel.text=[menuLeft objectAtIndex:indexPath.row];
+	return cell;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
