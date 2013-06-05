@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D035A2FF175F45A500F5809B /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D035A2FE175F45A500F5809B /* placeholder@2x.png */; };
 		D06BBBA9175E9B1A001D3BA3 /* Leftmenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = D06BBBA8175E9B1A001D3BA3 /* Leftmenu.plist */; };
 		D072666B175E370400BA64C0 /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D072666A175E370400BA64C0 /* navbar@2x.png */; };
 		D0726680175E3E7200BA64C0 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D072666E175E3E7200BA64C0 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D035A2FE175F45A500F5809B /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		D06BBBA8175E9B1A001D3BA3 /* Leftmenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Leftmenu.plist; sourceTree = "<group>"; };
 		D072666A175E370400BA64C0 /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		D072666D175E3E7200BA64C0 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				D07266A8175E6D3A00BA64C0 /* cancel@2x.png */,
+				D035A2FE175F45A500F5809B /* placeholder@2x.png */,
 				D07266A2175E6AE400BA64C0 /* navbar2-kanan@2x.png */,
 				D07266A0175E691400BA64C0 /* search@2x.png */,
 				D0726690175E59D400BA64C0 /* location_small@2x.png */,
@@ -396,6 +399,7 @@
 				D07266A3175E6AE400BA64C0 /* navbar2-kanan@2x.png in Resources */,
 				D07266A9175E6D3A00BA64C0 /* cancel@2x.png in Resources */,
 				D06BBBA9175E9B1A001D3BA3 /* Leftmenu.plist in Resources */,
+				D035A2FF175F45A500F5809B /* placeholder@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

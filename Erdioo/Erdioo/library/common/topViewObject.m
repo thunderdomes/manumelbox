@@ -21,12 +21,13 @@
 		self.NamaRadio=[dictionary objectForKey:@"NamaRadio"];
 		self.Genre=[dictionary objectForKey:@"Genre"];
 		self.twitter=[dictionary objectForKey:@"twitter"];
-		if(![dictionary objectForKey:@"Logo"]){
+	/*	if(![dictionary objectForKey:@"Logo"]){
 			self.Logo=@"placeholder";
 		}
 		else{
+	 */
 		self.Logo=[dictionary objectForKey:@"Logo"];
-		}
+		/*}*/
 				
 	}
 	return self;
