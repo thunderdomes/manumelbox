@@ -12,5 +12,8 @@
 @property(nonatomic,strong) NSString *IdRadio;
 @property(nonatomic,strong) NSString *NamaRadio;
 @property(nonatomic,strong) NSString *Genre;
+@property(nonatomic,strong) NSString *Logo;
+@property(nonatomic,strong) NSString *twitter;
+
 -(id)initWithDictionary:(NSDictionary *)dictionary;
 @end

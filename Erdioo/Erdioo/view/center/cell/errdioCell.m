@@ -14,6 +14,7 @@
 @synthesize Genre=_Genre;
 @synthesize location=_location;
 @synthesize location_text=_location_text;
+@synthesize Logo=_Logo;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -23,24 +24,21 @@
 		_wrapper=[[UIView alloc]init];
 		_wrapper.frame=CGRectMake(0, 0, 320, 79);
 		_wrapper.backgroundColor=cell_color;
-		/*
-		_wrapper.layer.borderColor = cell_border.CGColor;
-		_wrapper.layer.borderWidth = 1.0f;
-		_wrapper.layer.cornerRadius = 3;
-		[_wrapper.layer setShadowColor:cell_border.CGColor];
-		[_wrapper.layer setShadowOpacity:0.8];
-		[_wrapper.layer setShadowRadius:1.0];
-		[_wrapper.layer setShadowOffset:CGSizeMake(0, 1.0)];
-		_wrapper.layer.shouldRasterize = YES;
-		_wrapper.layer.rasterizationScale = [UIScreen mainScreen].scale;
-		_wrapper.layer.masksToBounds = NO;
-		*/
+
+		
 		_RadioName=[[UILabel alloc]init];
 		_RadioName.backgroundColor=[UIColor clearColor];
 		_RadioName.frame=CGRectMake(90, 5, 180, 20);
 		_RadioName.lineBreakMode=NSLineBreakByCharWrapping;
 		_RadioName.font=global_font_bold;
 		_RadioName.textColor=dark_gray;
+		
+		_Logo=[[UIImageView alloc]initWithFrame:CGRectMake(10, 5, 70, 70)];
+		_Logo.backgroundColor=[UIColor clearColor];
+		_Logo.layer.cornerRadius = 5.0;
+		_Logo.layer.masksToBounds = YES;
+		_Logo.layer.borderColor = [UIColor lightGrayColor].CGColor;
+		_Logo.layer.borderWidth = 1.0;
 		
 		_Genre=[[UILabel alloc]init];
 		_Genre.backgroundColor=[UIColor clearColor];
@@ -66,6 +64,7 @@
 		[_wrapper addSubview:_location];
 		[_wrapper addSubview:_Genre];
 		[_wrapper addSubview:_location_text];
+		[_wrapper addSubview:_Logo];
 		[self.contentView addSubview:_wrapper];
     }
     return self;

@@ -122,6 +122,7 @@
 	
 	cell.Genre.text = object_draw.Genre;
 
+	[cell.Logo setImageWithURL:[NSURL URLWithString:object_draw.Logo]];
 	cell.selectionStyle=UITableViewCellSelectionStyleNone;
 	
     return cell;
@@ -149,7 +150,7 @@
 	
     //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSLog(@"response object---->%@",[responseObject objectForKey:@"URLStreaming"]);
+		NSLog(@"response object---->%@",responseObject );
 		NSString *escapedValue =
 		[(NSString *)CFURLCreateStringByAddingPercentEscapes(
 															 nil,
