@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface erdioLeft : UIViewController
-
+{
+	UITableView *leftMenu;
+	
+}
 @end

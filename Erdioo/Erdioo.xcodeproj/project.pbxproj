@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D035A2FF175F45A500F5809B /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D035A2FE175F45A500F5809B /* placeholder@2x.png */; };
+		D06BBBA9175E9B1A001D3BA3 /* Leftmenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = D06BBBA8175E9B1A001D3BA3 /* Leftmenu.plist */; };
 		D072666B175E370400BA64C0 /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D072666A175E370400BA64C0 /* navbar@2x.png */; };
 		D0726680175E3E7200BA64C0 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D072666E175E3E7200BA64C0 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		D0726681175E3E7200BA64C0 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0726670175E3E7200BA64C0 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -29,6 +31,10 @@
 		D07266A7175E6B0900BA64C0 /* search.m in Sources */ = {isa = PBXBuildFile; fileRef = D07266A6175E6B0900BA64C0 /* search.m */; };
 		D07266A9175E6D3A00BA64C0 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D07266A8175E6D3A00BA64C0 /* cancel@2x.png */; };
 		D07266AD175E80BA00BA64C0 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D07266AC175E80BA00BA64C0 /* AudioStreamer.m */; };
+		D07266B8175E877100BA64C0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07266B6175E875F00BA64C0 /* AudioToolbox.framework */; };
+		D07266B9175E877100BA64C0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07266B4175E874E00BA64C0 /* MediaPlayer.framework */; };
+		D07266BA175E877100BA64C0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07266B2175E874400BA64C0 /* CFNetwork.framework */; };
+		D07266BE175E8D4A00BA64C0 /* netraPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D07266BD175E8D4A00BA64C0 /* netraPlayer.m */; };
 		D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC4175DACF5008A7F81 /* UIKit.framework */; };
 		D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC6175DACF5008A7F81 /* Foundation.framework */; };
 		D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */; };
@@ -43,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D035A2FE175F45A500F5809B /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
+		D06BBBA8175E9B1A001D3BA3 /* Leftmenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Leftmenu.plist; sourceTree = "<group>"; };
 		D072666A175E370400BA64C0 /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		D072666D175E3E7200BA64C0 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		D072666E175E3E7200BA64C0 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -82,6 +90,11 @@
 		D07266A8175E6D3A00BA64C0 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
 		D07266AB175E80BA00BA64C0 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
 		D07266AC175E80BA00BA64C0 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		D07266B2175E874400BA64C0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D07266B4175E874E00BA64C0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D07266B6175E875F00BA64C0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D07266BC175E8D4A00BA64C0 /* netraPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraPlayer.h; sourceTree = "<group>"; };
+		D07266BD175E8D4A00BA64C0 /* netraPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraPlayer.m; sourceTree = "<group>"; };
 		D0C35AC1175DACF5008A7F81 /* Erdioo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erdioo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C35AC4175DACF5008A7F81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0C35AC6175DACF5008A7F81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +121,9 @@
 			files = (
 				D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */,
 				D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */,
+				D07266B8175E877100BA64C0 /* AudioToolbox.framework in Frameworks */,
+				D07266B9175E877100BA64C0 /* MediaPlayer.framework in Frameworks */,
+				D07266BA175E877100BA64C0 /* CFNetwork.framework in Frameworks */,
 				D072669F175E63C700BA64C0 /* QuartzCore.framework in Frameworks */,
 				D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -190,6 +206,15 @@
 			path = Streamer;
 			sourceTree = "<group>";
 		};
+		D07266BB175E8D3A00BA64C0 /* player */ = {
+			isa = PBXGroup;
+			children = (
+				D07266BC175E8D4A00BA64C0 /* netraPlayer.h */,
+				D07266BD175E8D4A00BA64C0 /* netraPlayer.m */,
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
 		D0C35AB8175DACF5008A7F81 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +235,9 @@
 		D0C35AC3175DACF5008A7F81 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D07266B6175E875F00BA64C0 /* AudioToolbox.framework */,
+				D07266B4175E874E00BA64C0 /* MediaPlayer.framework */,
+				D07266B2175E874400BA64C0 /* CFNetwork.framework */,
 				D072669D175E63BE00BA64C0 /* QuartzCore.framework */,
 				D0C35AC4175DACF5008A7F81 /* UIKit.framework */,
 				D0C35AC6175DACF5008A7F81 /* Foundation.framework */,
@@ -242,6 +270,7 @@
 				D0C35AD6175DACF5008A7F81 /* Default.png */,
 				D0C35AD8175DACF5008A7F81 /* Default@2x.png */,
 				D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */,
+				D06BBBA8175E9B1A001D3BA3 /* Leftmenu.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -250,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				D07266A8175E6D3A00BA64C0 /* cancel@2x.png */,
+				D035A2FE175F45A500F5809B /* placeholder@2x.png */,
 				D07266A2175E6AE400BA64C0 /* navbar2-kanan@2x.png */,
 				D07266A0175E691400BA64C0 /* search@2x.png */,
 				D0726690175E59D400BA64C0 /* location_small@2x.png */,
@@ -261,6 +291,7 @@
 		D0C35AE3175DD315008A7F81 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				D07266BB175E8D3A00BA64C0 /* player */,
 				D07266AA175E80B900BA64C0 /* Streamer */,
 				D0726692175E60E400BA64C0 /* JASidePanels */,
 				D072666C175E3E7200BA64C0 /* AFNetworking */,
@@ -367,6 +398,8 @@
 				D07266A1175E691400BA64C0 /* search@2x.png in Resources */,
 				D07266A3175E6AE400BA64C0 /* navbar2-kanan@2x.png in Resources */,
 				D07266A9175E6D3A00BA64C0 /* cancel@2x.png in Resources */,
+				D06BBBA9175E9B1A001D3BA3 /* Leftmenu.plist in Resources */,
+				D035A2FF175F45A500F5809B /* placeholder@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +430,7 @@
 				D072669C175E61A600BA64C0 /* erdioLeft.m in Sources */,
 				D07266A7175E6B0900BA64C0 /* search.m in Sources */,
 				D07266AD175E80BA00BA64C0 /* AudioStreamer.m in Sources */,
+				D07266BE175E8D4A00BA64C0 /* netraPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

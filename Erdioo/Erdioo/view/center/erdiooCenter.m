@@ -52,7 +52,7 @@
 		
 		
 		[rightbarButton release];
-
+		
 		
     }
 	
@@ -67,23 +67,23 @@
 	[erdio removeAllObjects];
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=mostviewed&key=%@",Global_url,API_key];
 	NSLog(@"sURL--->%@",sURL);
-
+	
 	NSURL *URL=[NSURL URLWithString:sURL];
 	NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
-
+	
     AFJSONRequestOperation *operation=[[[AFJSONRequestOperation alloc] initWithRequest:request] autorelease];
 	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
 	
     //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-		 NSLog(@"responseObject: %@", [responseObject objectForKey:@"data"]);
+		NSLog(@"responseObject: %@", [responseObject objectForKey:@"data"]);
 		for(id erdioDict in [responseObject objectForKey:@"data"]){
 			topViewObject *topView=[[topViewObject alloc] initWithDictionary:erdioDict];
 			[erdio addObject:topView];
 			
 			[topView release];
 		}
-	
+		
 		[erdiooCenter_table reloadData];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
@@ -92,8 +92,8 @@
 		
 	}];
 	[operation start];
-   // [httpClient release];
-	}
+	// [httpClient release];
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -121,7 +121,14 @@
 	cell.RadioName.text = object_draw.NamaRadio;
 	
 	cell.Genre.text = object_draw.Genre;
-
+	if([object_draw.Logo isEqualToString:@""]){
+		NSLog(@"nama radio %@ nama depan%@",object_draw.NamaRadio,[object_draw.NamaRadio substringToIndex:1]);
+		cell.placeHolder.text =[object_draw.NamaRadio substringToIndex:1];
+	}
+	else{
+		cell.placeHolder.text=@"";
+	}
+	[cell.Logo setImageWithURL:[NSURL URLWithString:object_draw.Logo]placeholderImage:[UIImage imageNamed:@"placeholder"]];
 	cell.selectionStyle=UITableViewCellSelectionStyleNone;
 	
     return cell;
@@ -129,15 +136,60 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	return  79;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	topViewObject  *object_draw=[erdio objectAtIndex:indexPath.row];
+	//[self stream:[NSString stringWithFormat:@"%@",[object_draw.IdRadio]];
+	[self stream:object_draw.IdRadio];
+	
+}
+-(void)stream:(NSString*)radioNumber{
+	
+	
+	NSString * sURL = [NSString stringWithFormat:@"%@?id=%@&key=%@",Global_url,radioNumber,API_key];
+	
+	NSURL *URL=[NSURL URLWithString:sURL];
+	NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
+	
+    AFJSONRequestOperation *operation=[[[AFJSONRequestOperation alloc] initWithRequest:request] autorelease];
+	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+	
+    //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
+	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSLog(@"response object---->%@",responseObject );
+		NSString *escapedValue =
+		[(NSString *)CFURLCreateStringByAddingPercentEscapes(
+															 nil,
+															 (CFStringRef)[responseObject objectForKey:@"URLStreaming"],
+															 NULL,
+															 NULL,
+															 kCFStringEncodingUTF8)
+		 autorelease];
+		
+		NSURL *url = [NSURL URLWithString:escapedValue];
+		AudioStreamer *stremaer = [[AudioStreamer alloc] initWithURL:url];
+		if([stremaer isPlaying]){
+			[stremaer stop];
+		}
+		[stremaer start];
+	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		if(error){
+		}
+        NSLog(@"error: %@", [error description]);
+		
+	}];
+	[operation start];
+	
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+	
 	// Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
 	
-		[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
 	
 }
 - (void)didReceiveMemoryWarning

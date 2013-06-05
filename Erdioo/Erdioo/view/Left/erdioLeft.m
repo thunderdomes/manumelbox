@@ -19,7 +19,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor=darkest;
+		;
         // Custom initialization
+		leftMenu=[[UITableView alloc]init];
+		leftMenu.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+		leftMenu.backgroundColor=[UIColor clearColor];
+		leftMenu.separatorColor=left_separator;
+		[self.view addSubview:leftMenu];
     }
     return self;
 }
