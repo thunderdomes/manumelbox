@@ -126,7 +126,7 @@
 		cell.placeHolder.text =[object_draw.NamaRadio substringToIndex:1];
 	}
 	else{
-	cell.placeHolder.text=@"";
+		cell.placeHolder.text=@"";
 	}
 	[cell.Logo setImageWithURL:[NSURL URLWithString:object_draw.Logo]placeholderImage:[UIImage imageNamed:@"placeholder"]];
 	cell.selectionStyle=UITableViewCellSelectionStyleNone;
