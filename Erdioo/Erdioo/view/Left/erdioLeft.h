@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface erdioLeft : UIViewController
+@interface erdioLeft : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
 	UITableView *leftMenu;
+	NSMutableArray *menuLeft;
 	
 }
 @end

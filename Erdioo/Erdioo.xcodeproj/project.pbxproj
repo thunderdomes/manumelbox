@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D035A2FF175F45A500F5809B /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D035A2FE175F45A500F5809B /* placeholder@2x.png */; };
+		D035A301175F639100F5809B /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D035A300175F639100F5809B /* left@2x.png */; };
+		D035A305175F918800F5809B /* leftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D035A304175F918800F5809B /* leftCell.m */; };
+		D035A309175F92E600F5809B /* erdiooCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D035A308175F92E600F5809B /* erdiooCenter.m */; };
+		D035A30F175F934D00F5809B /* erdiooGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D035A30E175F934D00F5809B /* erdiooGroup.m */; };
+		D035A312175F935C00F5809B /* erdioomy.m in Sources */ = {isa = PBXBuildFile; fileRef = D035A311175F935C00F5809B /* erdioomy.m */; };
+		D035A315175F937300F5809B /* erdiooRegional.m in Sources */ = {isa = PBXBuildFile; fileRef = D035A314175F937300F5809B /* erdiooRegional.m */; };
 		D06BBBA9175E9B1A001D3BA3 /* Leftmenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = D06BBBA8175E9B1A001D3BA3 /* Leftmenu.plist */; };
 		D072666B175E370400BA64C0 /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D072666A175E370400BA64C0 /* navbar@2x.png */; };
 		D0726680175E3E7200BA64C0 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D072666E175E3E7200BA64C0 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -45,11 +51,21 @@
 		D0C35AD9175DACF5008A7F81 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35AD8175DACF5008A7F81 /* Default@2x.png */; };
 		D0C35ADB175DACF5008A7F81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */; };
 		D0C35AE9175DD3C1008A7F81 /* atta.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C35AE8175DD3C1008A7F81 /* atta.m */; };
-		D0C35AED175DD99E008A7F81 /* erdiooCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C35AEC175DD99E008A7F81 /* erdiooCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D035A2FE175F45A500F5809B /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
+		D035A300175F639100F5809B /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		D035A303175F918800F5809B /* leftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftCell.h; sourceTree = "<group>"; };
+		D035A304175F918800F5809B /* leftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftCell.m; sourceTree = "<group>"; };
+		D035A307175F92E600F5809B /* erdiooCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erdiooCenter.h; sourceTree = "<group>"; };
+		D035A308175F92E600F5809B /* erdiooCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erdiooCenter.m; sourceTree = "<group>"; };
+		D035A30D175F934D00F5809B /* erdiooGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erdiooGroup.h; sourceTree = "<group>"; };
+		D035A30E175F934D00F5809B /* erdiooGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erdiooGroup.m; sourceTree = "<group>"; };
+		D035A310175F935C00F5809B /* erdioomy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erdioomy.h; sourceTree = "<group>"; };
+		D035A311175F935C00F5809B /* erdioomy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erdioomy.m; sourceTree = "<group>"; };
+		D035A313175F937300F5809B /* erdiooRegional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erdiooRegional.h; sourceTree = "<group>"; };
+		D035A314175F937300F5809B /* erdiooRegional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erdiooRegional.m; sourceTree = "<group>"; };
 		D06BBBA8175E9B1A001D3BA3 /* Leftmenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Leftmenu.plist; sourceTree = "<group>"; };
 		D072666A175E370400BA64C0 /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		D072666D175E3E7200BA64C0 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -110,8 +126,6 @@
 		D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D0C35AE7175DD3C1008A7F81 /* atta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atta.h; sourceTree = "<group>"; };
 		D0C35AE8175DD3C1008A7F81 /* atta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = atta.m; sourceTree = "<group>"; };
-		D0C35AEB175DD99E008A7F81 /* erdiooCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erdiooCenter.h; sourceTree = "<group>"; };
-		D0C35AEC175DD99E008A7F81 /* erdiooCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erdiooCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +146,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D035A302175F8C2300F5809B /* leftCell */ = {
+			isa = PBXGroup;
+			children = (
+				D035A303175F918800F5809B /* leftCell.h */,
+				D035A304175F918800F5809B /* leftCell.m */,
+			);
+			path = leftCell;
+			sourceTree = "<group>";
+		};
+		D035A306175F92E600F5809B /* topRadio */ = {
+			isa = PBXGroup;
+			children = (
+				D035A307175F92E600F5809B /* erdiooCenter.h */,
+				D035A308175F92E600F5809B /* erdiooCenter.m */,
+			);
+			path = topRadio;
+			sourceTree = "<group>";
+		};
+		D035A30A175F932D00F5809B /* group */ = {
+			isa = PBXGroup;
+			children = (
+				D035A30D175F934D00F5809B /* erdiooGroup.h */,
+				D035A30E175F934D00F5809B /* erdiooGroup.m */,
+			);
+			path = group;
+			sourceTree = "<group>";
+		};
+		D035A30B175F932D00F5809B /* myradio */ = {
+			isa = PBXGroup;
+			children = (
+				D035A310175F935C00F5809B /* erdioomy.h */,
+				D035A311175F935C00F5809B /* erdioomy.m */,
+			);
+			path = myradio;
+			sourceTree = "<group>";
+		};
+		D035A30C175F932D00F5809B /* regional */ = {
+			isa = PBXGroup;
+			children = (
+				D035A313175F937300F5809B /* erdiooRegional.h */,
+				D035A314175F937300F5809B /* erdiooRegional.m */,
+			);
+			path = regional;
+			sourceTree = "<group>";
+		};
 		D072666C175E3E7200BA64C0 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +241,7 @@
 		D0726699175E618E00BA64C0 /* Left */ = {
 			isa = PBXGroup;
 			children = (
+				D035A302175F8C2300F5809B /* leftCell */,
 				D072669A175E61A600BA64C0 /* erdioLeft.h */,
 				D072669B175E61A600BA64C0 /* erdioLeft.m */,
 			);
@@ -280,6 +340,7 @@
 			children = (
 				D07266A8175E6D3A00BA64C0 /* cancel@2x.png */,
 				D035A2FE175F45A500F5809B /* placeholder@2x.png */,
+				D035A300175F639100F5809B /* left@2x.png */,
 				D07266A2175E6AE400BA64C0 /* navbar2-kanan@2x.png */,
 				D07266A0175E691400BA64C0 /* search@2x.png */,
 				D0726690175E59D400BA64C0 /* location_small@2x.png */,
@@ -331,9 +392,11 @@
 		D0C35AEA175DD91E008A7F81 /* center */ = {
 			isa = PBXGroup;
 			children = (
+				D035A30A175F932D00F5809B /* group */,
+				D035A30B175F932D00F5809B /* myradio */,
+				D035A30C175F932D00F5809B /* regional */,
+				D035A306175F92E600F5809B /* topRadio */,
 				D072668C175E4C2D00BA64C0 /* cell */,
-				D0C35AEB175DD99E008A7F81 /* erdiooCenter.h */,
-				D0C35AEC175DD99E008A7F81 /* erdiooCenter.m */,
 			);
 			path = center;
 			sourceTree = "<group>";
@@ -400,6 +463,7 @@
 				D07266A9175E6D3A00BA64C0 /* cancel@2x.png in Resources */,
 				D06BBBA9175E9B1A001D3BA3 /* Leftmenu.plist in Resources */,
 				D035A2FF175F45A500F5809B /* placeholder@2x.png in Resources */,
+				D035A301175F639100F5809B /* left@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +477,6 @@
 				D0C35AD1175DACF5008A7F81 /* main.m in Sources */,
 				D0C35AD5175DACF5008A7F81 /* AppDelegate.m in Sources */,
 				D0C35AE9175DD3C1008A7F81 /* atta.m in Sources */,
-				D0C35AED175DD99E008A7F81 /* erdiooCenter.m in Sources */,
 				D0726680175E3E7200BA64C0 /* AFHTTPClient.m in Sources */,
 				D0726681175E3E7200BA64C0 /* AFHTTPRequestOperation.m in Sources */,
 				D0726682175E3E7200BA64C0 /* AFImageRequestOperation.m in Sources */,
@@ -431,6 +494,11 @@
 				D07266A7175E6B0900BA64C0 /* search.m in Sources */,
 				D07266AD175E80BA00BA64C0 /* AudioStreamer.m in Sources */,
 				D07266BE175E8D4A00BA64C0 /* netraPlayer.m in Sources */,
+				D035A305175F918800F5809B /* leftCell.m in Sources */,
+				D035A309175F92E600F5809B /* erdiooCenter.m in Sources */,
+				D035A30F175F934D00F5809B /* erdiooGroup.m in Sources */,
+				D035A312175F935C00F5809B /* erdioomy.m in Sources */,
+				D035A315175F937300F5809B /* erdiooRegional.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

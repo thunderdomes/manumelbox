@@ -8,6 +8,7 @@
 
 #import "erdiooCenter.h"
 #import "errdioCell.h"
+#import "JASidePanelController.h"
 @interface erdiooCenter ()
 
 @end
@@ -33,6 +34,19 @@
 		[self.view addSubview:erdiooCenter_table];
 		[self fetchData];
 		
+		UIImage* image = [UIImage imageNamed:@"left"];
+		CGRect frame = CGRectMake(-5, 0, 44, 44);
+		UIButton* leftbutton = [[UIButton alloc] initWithFrame:frame];
+		[leftbutton setBackgroundImage:image forState:UIControlStateNormal];
+		//[leftbutton setBackgroundImage:[UIImage imageNamed:@"left-push"] forState:UIControlStateHighlighted];
+		[leftbutton addTarget:self action:@selector(lefbuttonPush) forControlEvents:UIControlEventTouchUpInside];
+		
+		UIView *leftbuttonView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
+		leftbuttonView.backgroundColor=[UIColor clearColor];
+		[leftbuttonView addSubview:leftbutton];
+		UIBarButtonItem* leftbarbutton = [[UIBarButtonItem alloc] initWithCustomView:leftbuttonView];
+		
+		
 		UIImage* image3 = [UIImage imageNamed:@"search"];
 		CGRect frame3 = CGRectMake(50, 0, 44, 44);
 		UIButton *searchbutton = [[UIButton alloc] initWithFrame:frame3];
@@ -49,14 +63,19 @@
 		
 		
 		[self.navigationItem setRightBarButtonItem:rightbarButton];
-		
+		[self.navigationItem setLeftBarButtonItem:leftbarbutton];
 		
 		[rightbarButton release];
+		
+		
 		
 		
     }
 	
     return self;
+}
+-(void)lefbuttonPush{
+	[self.sidePanelController showLeftPanelAnimated:YES];
 }
 -(void)searchRadio{
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:searchWindow];
