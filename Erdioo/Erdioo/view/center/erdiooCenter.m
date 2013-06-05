@@ -137,6 +137,8 @@
 	
 }
 -(void)stream:(NSString*)radioNumber{
+	
+	
 	NSString * sURL = [NSString stringWithFormat:@"%@?id=%@&key=%@",Global_url,radioNumber,API_key];
 	
 	NSURL *URL=[NSURL URLWithString:sURL];
@@ -148,6 +150,21 @@
     //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 		NSLog(@"response object---->%@",[responseObject objectForKey:@"URLStreaming"]);
+		NSString *escapedValue =
+		[(NSString *)CFURLCreateStringByAddingPercentEscapes(
+															 nil,
+															 (CFStringRef)[responseObject objectForKey:@"URLStreaming"],
+															 NULL,
+															 NULL,
+															 kCFStringEncodingUTF8)
+		 autorelease];
+		
+		NSURL *url = [NSURL URLWithString:escapedValue];
+		AudioStreamer *stremaer = [[AudioStreamer alloc] initWithURL:url];
+		if([stremaer isPlaying]){
+			[stremaer stop];
+		}
+		[stremaer start];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
 		}
