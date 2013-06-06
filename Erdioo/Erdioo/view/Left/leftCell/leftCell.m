@@ -9,12 +9,18 @@
 #import "leftCell.h"
 
 @implementation leftCell
-
+@synthesize label=_label;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+		
+		self.label=[[UILabel alloc]initWithFrame:CGRectMake(10, 10, 300, 40)];
+		self.label.textColor=[UIColor whiteColor];
+		self.label.backgroundColor=[UIColor clearColor];
+		
+		[self.contentView addSubview:self.label];
     }
     return self;
 }

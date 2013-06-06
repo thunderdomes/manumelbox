@@ -7,7 +7,7 @@
 //
 
 #import "erdioLeft.h"
-
+#import "leftCell.h"
 @interface erdioLeft ()
 
 @end
@@ -26,6 +26,7 @@
 		leftMenu.backgroundColor=[UIColor clearColor];
 		leftMenu.separatorColor=left_separator;
 		leftMenu.dataSource=self;
+		leftMenu.tableHeaderView.frame=CGRectMake(0, 0, 320, 100);
 		leftMenu.delegate=self;
 		[self.view addSubview:leftMenu];
 		
@@ -37,6 +38,24 @@
     }
     return self;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+{
+    return 200;
+}
+- (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
+{
+	/* assumes your tableview is 320 wide, makes a section header 80 pixels high */
+	UIView *customView = [[[UIView alloc] initWithFrame: CGRectMake(0.0, 0.0, 320.0, 81.0)] autorelease];
+	
+	UIImageView *imgView = [[[UIImageView alloc] initWithImage: [UIImage imageNamed:@""]] autorelease];
+	/* makes the views slightly transparent so you can see the cells behind them as you scroll */
+	imgView.alpha = 0.7;
+	customView.backgroundColor = [UIColor clearColor];
+	
+	[customView addSubview: imgView];
+	
+	return customView;
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -47,9 +66,12 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+	leftCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[[leftCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"] autorelease];
+    }
 	
-	cell.textLabel.text=[menuLeft objectAtIndex:indexPath.row];
+	cell.label.text=[menuLeft objectAtIndex:indexPath.row];
 	return cell;
 }
 - (void)viewDidLoad
