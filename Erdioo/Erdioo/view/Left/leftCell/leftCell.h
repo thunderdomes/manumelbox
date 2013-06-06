@@ -10,4 +10,5 @@
 
 @interface leftCell : UITableViewCell
 
+@property (nonatomic,strong) UILabel *label;
 @end

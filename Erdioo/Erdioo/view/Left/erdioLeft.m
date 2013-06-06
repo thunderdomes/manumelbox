@@ -7,7 +7,7 @@
 //
 
 #import "erdioLeft.h"
-
+#import "leftCell.h"
 @interface erdioLeft ()
 
 @end
@@ -50,7 +50,7 @@
 	UIImageView *imgView = [[[UIImageView alloc] initWithImage: [UIImage imageNamed:@""]] autorelease];
 	/* makes the views slightly transparent so you can see the cells behind them as you scroll */
 	imgView.alpha = 0.7;
-	customView.backgroundColor = [UIColor colorWithRed: 1.0 green: 1.0 blue: 1.0 alpha: 0.7];
+	customView.backgroundColor = [UIColor clearColor];
 	
 	[customView addSubview: imgView];
 	
@@ -66,9 +66,12 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+	leftCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[[leftCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"] autorelease];
+    }
 	
-	cell.textLabel.text=[menuLeft objectAtIndex:indexPath.row];
+	cell.label.text=[menuLeft objectAtIndex:indexPath.row];
 	return cell;
 }
 - (void)viewDidLoad

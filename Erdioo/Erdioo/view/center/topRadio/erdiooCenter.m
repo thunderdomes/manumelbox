@@ -140,14 +140,8 @@
 	cell.RadioName.text = object_draw.NamaRadio;
 	
 	cell.Genre.text = object_draw.Genre;
-	if([object_draw.Logo isEqualToString:@""]){
-		NSLog(@"nama radio %@ nama depan%@",object_draw.NamaRadio,[object_draw.NamaRadio substringToIndex:1]);
-		cell.placeHolder.text =[object_draw.NamaRadio substringToIndex:1];
-	}
-	else{
-		cell.placeHolder.text=@"";
-	}
-	[cell.Logo setImageWithURL:[NSURL URLWithString:object_draw.Logo]placeholderImage:[UIImage imageNamed:@"placeholder"]];
+	cell.placeHolder.hidden=YES;
+	[cell.Logo setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.erdioo.com/icon/?id=%@",object_draw.IdRadio]]placeholderImage:[UIImage imageNamed:@"placeholder"]];
 	cell.location_text.text=object_draw.Lokasi;
 	cell.selectionStyle=UITableViewCellSelectionStyleNone;
 	
@@ -173,7 +167,7 @@
 	
     AFJSONRequestOperation *operation=[[[AFJSONRequestOperation alloc] initWithRequest:request] autorelease];
 	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
-	
+
     //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 		NSLog(@"response object---->%@",responseObject );
