@@ -7,8 +7,7 @@
 //
 
 #import "erdiooCenter.h"
-#import "errdioCell.h"
-#import "JASidePanelController.h"
+
 @interface erdiooCenter ()
 
 @end
@@ -23,7 +22,7 @@
 		self.view.backgroundColor=lightGray;
 		self.title=AppName;
 		erdio=[[NSMutableArray alloc]init];
-		[erdio addObject:@"1"];
+		
 		erdiooCenter_table=[[UITableView alloc]init];
 		erdiooCenter_table.delegate=self;
 		erdiooCenter_table.dataSource=self;
@@ -31,7 +30,9 @@
 		erdiooCenter_table.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-44);
 		//[erdiooCenter_table setSeparatorColor:[UIColor clearColor]];
 		erdiooCenter_table.backgroundColor=[UIColor clearColor];
+		
 		[self.view addSubview:erdiooCenter_table];
+		
 		[self fetchData];
 		
 		UIImage* image = [UIImage imageNamed:@"left"];

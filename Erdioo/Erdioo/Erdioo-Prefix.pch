@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 #import "atta.h"
 #import "AFNetworking.h"
-#import "UIImageView+AFNetworking.h"s
+#import "UIImageView+AFNetworking.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AudioStreamer.h"
 #import "UIViewController+JASidePanel.h"
@@ -23,4 +23,10 @@
 ////object dari server
 #import "provinsiObject.h"
 #import "topViewObject.h"
+
+//common
+
+#import "errdioCell.h"
+#import "JASidePanelController.h"
+
 #endif
