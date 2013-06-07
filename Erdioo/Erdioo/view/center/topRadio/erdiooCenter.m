@@ -203,7 +203,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
 	
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
 	
 }
 - (void)didReceiveMemoryWarning

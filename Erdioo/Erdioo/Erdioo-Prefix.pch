@@ -13,11 +13,14 @@
 #import <Foundation/Foundation.h>
 #import "atta.h"
 #import "AFNetworking.h"
-#import "UIImageView+AFNetworking.h"
-#import "topViewObject.h"
+#import "UIImageView+AFNetworking.h"s
 #import <QuartzCore/QuartzCore.h>
 #import "AudioStreamer.h"
 #import "UIViewController+JASidePanel.h"
 #import "CoreData+MagicalRecord.h"
 #import "Flurry.h"
+
+////object dari server
+#import "provinsiObject.h"
+#import "topViewObject.h"
 #endif

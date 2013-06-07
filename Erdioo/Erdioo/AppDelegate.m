@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "JASidePanelController.h"
 #import "erdiooCenter.h"
+#import "erdiooGroup.h"
+#import "erdioomy.h"
+#import "erdiooRegional.h"
 #import "erdioLeft.h"
 @implementation AppDelegate
 
@@ -20,6 +23,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(setCenter:)
+												name:@"dealNotification"
+											  object:nil];
 	[Flurry startSession:flurry_api];
 	[MagicalRecord setupCoreDataStackWithStoreNamed:@"MyDatabase.sqlite"];
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
@@ -36,8 +42,23 @@
     return YES;
 }
 -(void)setCenter:(NSNotification *)name{
+	
+	NSLog(@"name---->%@",name);
+	NSMutableArray *dict = (NSMutableArray*)name.object;
 	if(name==nil){
 		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdiooCenter alloc] init]];
+	}
+	else if([[dict objectAtIndex:0] isEqualToString:@"erdiooCenter"]){
+		self.viewController.centerPanel =nil;
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdiooCenter alloc] init]];
+	}
+	else if([[dict objectAtIndex:0] isEqualToString:@"erdiooRegional"]){
+		self.viewController.centerPanel =nil;
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdiooRegional alloc] init]];
+	}
+	else if([[dict objectAtIndex:0] isEqualToString:@"erdioomy"]){
+		self.viewController.centerPanel =nil;
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdioomy alloc] init]];
 	}
 	
 }

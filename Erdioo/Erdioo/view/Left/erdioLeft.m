@@ -87,8 +87,30 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	[self.sidePanelController showCenterPanelAnimated:YES];
+	//[self.sidePanelController showCenterPanelAnimated:YES];
+	NSMutableArray *dataPass=[[NSMutableArray alloc]init];
+	if(indexPath.row==0){
+		[dataPass addObject:@"erdiooCenter"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
 	
+		[dataPass removeAllObjects];
+		[dataPass release];
+	}
+	if(indexPath.row==1){
+		[dataPass addObject:@"erdioomy"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[dataPass removeAllObjects];
+		[dataPass release];
+	}
+	if(indexPath.row==2){
+		[dataPass addObject:@"erdiooRegional"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[dataPass removeAllObjects];
+		[dataPass release];
+	}
+	[self.sidePanelController showCenterPanelAnimated:YES];
 	
 }
 - (void)viewDidLoad

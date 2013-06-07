@@ -63,7 +63,6 @@
 		_location_text.font=global_font_medium_light;
 		_location_text.lineBreakMode=NSLineBreakByCharWrapping;
 		_location_text.textColor=dark_gray;
-		_location_text.text=@"Indonesia";
 
 		
 		_location=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"location_small"]];

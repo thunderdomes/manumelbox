@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface erdiooRegional : UIViewController
+@interface erdiooRegional : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
 	UITableView *regional_radioList;
 	NSMutableArray *provinsi;
