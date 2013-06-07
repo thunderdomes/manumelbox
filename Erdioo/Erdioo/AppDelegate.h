@@ -16,5 +16,5 @@
 
 @property (strong, nonatomic) erdiooCenter *erdioMain;
 @property (strong, nonatomic) JASidePanelController *viewController;
-+(void)setCenter:(NSString*)name;
+
 @end

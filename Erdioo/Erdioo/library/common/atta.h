@@ -13,6 +13,7 @@
 extern NSString * const AppName;
 extern NSString * const API_key;
 extern NSString * const Global_url;
+extern NSString * const flurry_api;
 extern NSString * const top_radio;
 
 #define lightGray   [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1]

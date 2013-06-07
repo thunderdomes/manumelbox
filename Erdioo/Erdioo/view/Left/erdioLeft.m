@@ -8,7 +8,8 @@
 
 #import "erdioLeft.h"
 #import "leftCell.h"
-#import "AppDelegate.h"
+#import "JASidePanelController.h"
+#import "UIViewController+JASidePanel.h"
 @interface erdioLeft ()
 
 @end
@@ -86,7 +87,9 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	[AppDelegate setCenter:[menuLeft objectAtIndex:indexPath.row]];
+	[self.sidePanelController showCenterPanelAnimated:YES];
+	
+	
 }
 - (void)viewDidLoad
 {

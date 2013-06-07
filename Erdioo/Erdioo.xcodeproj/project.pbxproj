@@ -71,6 +71,8 @@
 		D09E9DB01761BFCC00C1D786 /* erdioo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D09E9DAE1761BFCC00C1D786 /* erdioo.xcdatamodeld */; };
 		D09E9DB21761CCBE00C1D786 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09E9DB11761CCBE00C1D786 /* logo@2x.png */; };
 		D09E9DB41761D9A000C1D786 /* selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09E9DB31761D9A000C1D786 /* selected@2x.png */; };
+		D09E9DB81762158D00C1D786 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E9DB71762158D00C1D786 /* libFlurry.a */; };
+		D09E9DBA1762163D00C1D786 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E9DB91762163D00C1D786 /* SystemConfiguration.framework */; };
 		D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC4175DACF5008A7F81 /* UIKit.framework */; };
 		D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC6175DACF5008A7F81 /* Foundation.framework */; };
 		D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */; };
@@ -199,6 +201,9 @@
 		D09E9DAF1761BFCC00C1D786 /* erdioo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = erdioo.xcdatamodel; sourceTree = "<group>"; };
 		D09E9DB11761CCBE00C1D786 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		D09E9DB31761D9A000C1D786 /* selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@2x.png"; sourceTree = "<group>"; };
+		D09E9DB61762158D00C1D786 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		D09E9DB71762158D00C1D786 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		D09E9DB91762163D00C1D786 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D0C35AC1175DACF5008A7F81 /* Erdioo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erdioo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C35AC4175DACF5008A7F81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0C35AC6175DACF5008A7F81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -221,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09E9DBA1762163D00C1D786 /* SystemConfiguration.framework in Frameworks */,
 				D035A36D175F9F1600F5809B /* CoreData.framework in Frameworks */,
 				D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */,
 				D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */,
@@ -229,6 +235,7 @@
 				D07266BA175E877100BA64C0 /* CFNetwork.framework in Frameworks */,
 				D072669F175E63C700BA64C0 /* QuartzCore.framework in Frameworks */,
 				D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */,
+				D09E9DB81762158D00C1D786 /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,10 +472,18 @@
 			path = player;
 			sourceTree = "<group>";
 		};
+		D09E9DB51762158D00C1D786 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				D09E9DB61762158D00C1D786 /* Flurry.h */,
+				D09E9DB71762158D00C1D786 /* libFlurry.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
 		D0C35AB8175DACF5008A7F81 = {
 			isa = PBXGroup;
 			children = (
-				D035A36C175F9F1600F5809B /* CoreData.framework */,
 				D0C35ACA175DACF5008A7F81 /* Erdioo */,
 				D0C35AC3175DACF5008A7F81 /* Frameworks */,
 				D0C35AC2175DACF5008A7F81 /* Products */,
@@ -486,6 +501,8 @@
 		D0C35AC3175DACF5008A7F81 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D09E9DB91762163D00C1D786 /* SystemConfiguration.framework */,
+				D035A36C175F9F1600F5809B /* CoreData.framework */,
 				D07266B6175E875F00BA64C0 /* AudioToolbox.framework */,
 				D07266B4175E874E00BA64C0 /* MediaPlayer.framework */,
 				D07266B2175E874400BA64C0 /* CFNetwork.framework */,
@@ -545,6 +562,7 @@
 		D0C35AE3175DD315008A7F81 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				D09E9DB51762158D00C1D786 /* Flurry */,
 				D035A316175F9D6000F5809B /* MagicalRecord */,
 				D07266BB175E8D3A00BA64C0 /* player */,
 				D07266AA175E80B900BA64C0 /* Streamer */,
@@ -801,6 +819,10 @@
 				GCC_PREFIX_HEADER = "Erdioo/Erdioo-Prefix.pch";
 				INFOPLIST_FILE = "Erdioo/Erdioo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Erdioo/library/Flurry\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -813,6 +835,10 @@
 				GCC_PREFIX_HEADER = "Erdioo/Erdioo-Prefix.pch";
 				INFOPLIST_FILE = "Erdioo/Erdioo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Erdioo/library/Flurry\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -20,12 +20,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[Flurry startSession:flurry_api];
 	[MagicalRecord setupCoreDataStackWithStoreNamed:@"MyDatabase.sqlite"];
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
 	self.viewController = [[JASidePanelController alloc] init];
 	self.viewController.leftPanel = [[erdioLeft alloc] init];
-    self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdiooCenter alloc] init]];
+	[self setCenter:nil];
     [self.window makeKeyAndVisible];
 	
 	//UINavigationBar *navBar = [erdiooCenter navigationBar];
@@ -34,8 +35,11 @@
 	self.window.rootViewController = self.viewController;
     return YES;
 }
-+(void)setCenter:(NSString *)name{
-	NSLog(@"name--->%@",name);
+-(void)setCenter:(NSNotification *)name{
+	if(name==nil){
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdiooCenter alloc] init]];
+	}
+	
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {
