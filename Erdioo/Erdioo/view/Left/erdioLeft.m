@@ -75,7 +75,7 @@
     if (cell == nil) {
         cell = [[[leftCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"] autorelease];
     }
-	
+	[cell.icon setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d",indexPath.row]]];
 	cell.label.text=[menuLeft objectAtIndex:indexPath.row];
 	cell.selectedBackgroundView = [ [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"selected"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ]autorelease];
 	return cell;
