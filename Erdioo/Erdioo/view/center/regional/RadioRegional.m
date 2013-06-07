@@ -115,7 +115,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	return  79;
 }
-
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)] autorelease];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
+}
 - (void) goBack
 {
     [self.navigationController popViewControllerAnimated:YES];

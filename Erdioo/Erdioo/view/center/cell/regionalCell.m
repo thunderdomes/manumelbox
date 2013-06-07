@@ -37,18 +37,18 @@
 		
 		_JumlahRadio=[[UILabel alloc]init];
 		_JumlahRadio.backgroundColor=[UIColor clearColor];
-		_JumlahRadio.frame=CGRectMake(320-90, 15, 180, 20);
+		_JumlahRadio.frame=CGRectMake(320-90, 23, 180, 20);
 		_JumlahRadio.font=global_font_medium_bold_small;
 		_JumlahRadio.lineBreakMode=NSLineBreakByCharWrapping;
 		_JumlahRadio.textColor=dark_gray;
 		//_JumlahRadio.backgroundColor=[UIColor greenColor];
 		
 		_maps=[[UIImageView alloc]initWithImage:[UIImage imageNamed:maps]];
-		_maps.frame=CGRectMake(3, 5, 44, 44);
+		_maps.frame=CGRectMake(3, 10, 44, 44);
 		//_maps.backgroundColor=[UIColor yellowColor];
 		
 		_arrow=[[UIImageView alloc]initWithImage:[UIImage imageNamed:arrow]];
-		_arrow.frame=CGRectMake(290, 5, 44, 44);
+		_arrow.frame=CGRectMake(290, 10, 44, 44);
 		//_arrow.backgroundColor=[UIColor blackColor];
 		
 		
