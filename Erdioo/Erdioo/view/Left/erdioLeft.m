@@ -32,12 +32,12 @@
 		[self.view addSubview:leftMenu];
 		
 		menuLeft=[[NSMutableArray alloc]init];
-		[menuLeft addObject:@"Top Radio"];
-		[menuLeft addObject:@"My Saved Radio"];
-		[menuLeft addObject:@"Regional Radio"];
-		[menuLeft addObject:@"Group Radio"];
+		[menuLeft addObject:@"Top Erdioo"];
+		[menuLeft addObject:@"My Erdioo"];
+		[menuLeft addObject:@"Regional Erdioo"];
+		[menuLeft addObject:@"Group Erdioo"];
 		[menuLeft addObject:@"Berita"];
-		[menuLeft addObject:@"About Us"];
+		[menuLeft addObject:@"Tentang Erdioo"];
     }
     return self;
 }
@@ -75,7 +75,13 @@
     }
 	
 	cell.label.text=[menuLeft objectAtIndex:indexPath.row];
+	cell.selectedBackgroundView = [ [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"selected"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ]autorelease];
 	return cell;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)] autorelease];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
 }
 - (void)viewDidLoad
 {
