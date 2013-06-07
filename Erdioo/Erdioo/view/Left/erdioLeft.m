@@ -28,29 +28,32 @@
 		leftMenu.dataSource=self;
 		leftMenu.tableHeaderView.frame=CGRectMake(0, 0, 320, 100);
 		leftMenu.delegate=self;
+		leftMenu.scrollEnabled=NO;
 		[self.view addSubview:leftMenu];
 		
 		menuLeft=[[NSMutableArray alloc]init];
 		[menuLeft addObject:@"Top Radio"];
 		[menuLeft addObject:@"My Saved Radio"];
-		[menuLeft addObject:@"regional Radio"];
+		[menuLeft addObject:@"Regional Radio"];
+		[menuLeft addObject:@"Group Radio"];
+		[menuLeft addObject:@"Berita"];
 		[menuLeft addObject:@"About Us"];
     }
     return self;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
 {
-    return 200;
+    return 60;
 }
 - (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
 {
 	/* assumes your tableview is 320 wide, makes a section header 80 pixels high */
-	UIView *customView = [[[UIView alloc] initWithFrame: CGRectMake(0.0, 0.0, 320.0, 81.0)] autorelease];
+	UIView *customView = [[[UIView alloc] initWithFrame: CGRectMake(0.0, 0.0, 320.0, 60)] autorelease];
 	
-	UIImageView *imgView = [[[UIImageView alloc] initWithImage: [UIImage imageNamed:@""]] autorelease];
+	UIImageView *imgView = [[[UIImageView alloc] initWithImage: [UIImage imageNamed:@"logo"]] autorelease];
 	/* makes the views slightly transparent so you can see the cells behind them as you scroll */
 	imgView.alpha = 0.7;
-	customView.backgroundColor = [UIColor clearColor];
+	customView.backgroundColor = [UIColor colorWithRed:0.153 green:0.169 blue:0.2 alpha:1];
 	
 	[customView addSubview: imgView];
 	

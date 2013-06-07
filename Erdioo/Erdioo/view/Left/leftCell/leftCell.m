@@ -16,7 +16,8 @@
     if (self) {
         // Initialization code
 		
-		self.label=[[UILabel alloc]initWithFrame:CGRectMake(10, 10, 300, 40)];
+		self.label=[[UILabel alloc]initWithFrame:CGRectMake(10, 0, 300, 40)];
+		self.label.font=global_font_bold;
 		self.label.textColor=[UIColor whiteColor];
 		self.label.backgroundColor=[UIColor clearColor];
 		

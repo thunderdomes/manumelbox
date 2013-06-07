@@ -27,6 +27,7 @@ extern NSString * const top_radio;
 
 #define global_font_medium [UIFont fontWithName:@"HelveticaNeue-Medium" size:12]
 #define global_font_medium_light [UIFont fontWithName:@"HelveticaNeue-Light" size:13]
+#define global_font_medium_bold [UIFont fontWithName:@"HelveticaNeue-Bold" size:16]
 
 //global image define
 extern NSString * const navbar;
