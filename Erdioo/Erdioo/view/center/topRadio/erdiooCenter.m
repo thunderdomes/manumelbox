@@ -18,6 +18,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		indexpath_now=-1;
 		searchWindow=[[search alloc]init];
 		self.view.backgroundColor=lightGray;
 		self.title=AppName;
@@ -160,8 +161,20 @@
 	
 }
 -(void)snapped:(id)sender{
-	NSLog(@"sender.tag--->%d",[sender tag]);
-
+	
+	if(indexpath_now==[sender tag]){
+		NSLog(@"nilai indexpath_now sebelumnya-->%d",indexpath_now);
+		indexpath_now=-1;
+		NSLog(@"nilai indexpath_now-->%d",indexpath_now);
+	
+	}
+	else{
+		NSLog(@"nilai indexpath_now sebelumnya-->%d",indexpath_now);
+		indexpath_now=[sender tag];
+		
+		NSLog(@"nilai indexpath_now-->%d",indexpath_now);
+	}
+	
 }
 -(void)stream:(NSString*)radioNumber{
 	

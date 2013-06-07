@@ -12,6 +12,7 @@
 {
 	NSMutableArray *erdio;
 	search *searchWindow;
+	NSInteger indexpath_now;
 }
 @property (nonatomic,strong)UITableView *erdiooCenter_table;
 @end
