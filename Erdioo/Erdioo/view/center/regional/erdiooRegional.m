@@ -8,6 +8,7 @@
 
 #import "erdiooRegional.h"
 #import "regionalCell.h"
+#import "RadioRegional.h"
 @interface erdiooRegional ()
 
 @end
@@ -19,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		self.title=@"Regional Erdioo";
 		self.view.backgroundColor=[UIColor whiteColor];
 		regional_radioList=[[UITableView alloc]init];
 		[regional_radioList setSeparatorColor:[UIColor colorWithRed:0.875 green:0.875 blue:0.875 alpha:1]];
@@ -29,6 +31,7 @@
 		[self.view addSubview:regional_radioList];
 		provinsi=[[NSMutableArray alloc]init];
 		[self fetchData];
+		
     }
     return self;
 }
@@ -54,7 +57,7 @@
 			
 			[daerah release];
 		}
-	
+		
 		[regional_radioList reloadData];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
@@ -81,25 +84,41 @@
     if (cell == nil) {
         cell = [[[regionalCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
- 
+ 	if(indexPath.row % 2==0){
+		cell.contentView.backgroundColor=[UIColor colorWithRed:0.961 green:0.961 blue:0.961 alpha:1];
+	}
+	else{
+		cell.contentView.backgroundColor=[UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1];
+	}
 	
 	cell.NamaDaerah.text=object_draw.NamaPropinsi;
 	cell.JumlahRadio.text=[NSString stringWithFormat:@"%@ Radio",object_draw.JumlahRadio];
-	cell.selectionStyle=UITableViewCellSelectionStyleNone;
-	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	cell.selectionStyle=UITableViewCellEditingStyleNone;
+	
 	
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	return  53;
+	return  63;
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSLog(@"indexpat----->%d",indexPath.row);
+	RadioRegional *regional=[[RadioRegional alloc]init];
+	provinsiObject  *object_draw=[provinsi objectAtIndex:indexPath.row];
+	regional.NamaPropinsi=object_draw.NamaPropinsi;
+	regional.idPropinsi=object_draw.idPropinsi;
+	[self.navigationController pushViewController:regional animated:YES];
+	[regional release];
+}
+
+
 -(void)viewWillAppear:(BOOL)animated{
-[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
 }
 - (void)didReceiveMemoryWarning
 {

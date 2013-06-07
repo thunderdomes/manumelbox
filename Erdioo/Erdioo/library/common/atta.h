@@ -33,4 +33,8 @@ extern NSString * const top_radio;
 
 //global image define
 extern NSString * const navbar;
+extern NSString * const arrow;
+extern NSString * const maps;
+extern NSString * const back;
+
 @end

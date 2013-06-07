@@ -14,6 +14,7 @@
 @synthesize JumlahRadio=_JumlahRadio;
 @synthesize radioText=_radioText;
 @synthesize maps=_maps;
+@synthesize arrow=_arrow;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -24,6 +25,7 @@
 		_NamaDaerah.backgroundColor=[UIColor clearColor];
 		_NamaDaerah.font=global_font_bold;
 		_NamaDaerah.textColor=dark_gray;
+		//_NamaDaerah.backgroundColor=[UIColor redColor];
 		
 		_radioText=[[UILabel alloc]init];
 		_radioText.backgroundColor=[UIColor clearColor];
@@ -31,6 +33,7 @@
 		_radioText.font=global_font_medium_light;
 		_radioText.textColor=dark_gray;
 		_radioText.text=@"Indonesia";
+		//_radioText.backgroundColor=[UIColor orangeColor];
 		
 		_JumlahRadio=[[UILabel alloc]init];
 		_JumlahRadio.backgroundColor=[UIColor clearColor];
@@ -38,9 +41,15 @@
 		_JumlahRadio.font=global_font_medium_bold_small;
 		_JumlahRadio.lineBreakMode=NSLineBreakByCharWrapping;
 		_JumlahRadio.textColor=dark_gray;
+		//_JumlahRadio.backgroundColor=[UIColor greenColor];
 		
-		_maps=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"map"]];
+		_maps=[[UIImageView alloc]initWithImage:[UIImage imageNamed:maps]];
 		_maps.frame=CGRectMake(3, 5, 44, 44);
+		//_maps.backgroundColor=[UIColor yellowColor];
+		
+		_arrow=[[UIImageView alloc]initWithImage:[UIImage imageNamed:arrow]];
+		_arrow.frame=CGRectMake(290, 5, 44, 44);
+		//_arrow.backgroundColor=[UIColor blackColor];
 		
 		
 
@@ -49,6 +58,7 @@
 		[self.contentView addSubview:_radioText];
 		[self.contentView addSubview:_JumlahRadio];
 		[self.contentView addSubview:_maps];
+		[self.contentView addSubview:_arrow];
     }
     return self;
 }
