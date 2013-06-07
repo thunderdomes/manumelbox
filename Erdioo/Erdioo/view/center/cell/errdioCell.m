@@ -15,12 +15,13 @@
 @synthesize location=_location;
 @synthesize location_text=_location_text;
 @synthesize Logo=_Logo;
-@synthesize placeHolder=_placeHolder;
+@synthesize snapped=_snapped;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+		
         // Initialization code
 		_wrapper=[[UIView alloc]init];
 		_wrapper.frame=CGRectMake(0, 0, 320, 79);
@@ -42,14 +43,7 @@
 		_Logo.layer.borderWidth = 1.0;
 		_Logo.hidden=NO;
 		
-		_placeHolder=[[UILabel alloc]initWithFrame:CGRectMake(10, 5, 70, 70)];
-		_placeHolder.backgroundColor=[UIColor clearColor];
-		_placeHolder.textColor=[UIColor whiteColor];
-		_placeHolder.textAlignment=NSTextAlignmentCenter;
-		_placeHolder.text=@"A";
-		_placeHolder.font=[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:25];
-		
-		
+				
 		_Genre=[[UILabel alloc]init];
 		_Genre.backgroundColor=[UIColor clearColor];
 		_Genre.frame=CGRectMake(90, 25, 180, 20);
@@ -74,7 +68,6 @@
 		[_wrapper addSubview:_Genre];
 		[_wrapper addSubview:_location_text];
 		[_wrapper addSubview:_Logo];
-		[_wrapper addSubview:_placeHolder];
 		[self.contentView addSubview:_wrapper];
     }
     return self;
