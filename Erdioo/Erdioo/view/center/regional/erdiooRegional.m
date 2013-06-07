@@ -19,6 +19,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		regional_radioList=[[UITableView alloc]init];
+		[regional_radioList setSeparatorColor:[UIColor colorWithRed:0.875 green:0.875 blue:0.875 alpha:1]];
+		regional_radioList.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-44);
+		regional_radioList.backgroundColor=[UIColor clearColor];
+		[self.view addSubview:regional_radioList];
+
     }
     return self;
 }

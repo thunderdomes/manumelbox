@@ -8,6 +8,7 @@
 
 #import "erdioLeft.h"
 #import "leftCell.h"
+#import "AppDelegate.h"
 @interface erdioLeft ()
 
 @end
@@ -82,6 +83,10 @@
     UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)] autorelease];
     view.backgroundColor = [UIColor clearColor];
     return view;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	[AppDelegate setCenter:[menuLeft objectAtIndex:indexPath.row]];
 }
 - (void)viewDidLoad
 {
