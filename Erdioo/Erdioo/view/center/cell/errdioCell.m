@@ -43,6 +43,13 @@
 		_Logo.layer.borderWidth = 1.0;
 		_Logo.hidden=NO;
 		
+		_snapped=[UIButton buttonWithType:UIButtonTypeCustom];
+		[_snapped setBackgroundImage:[UIImage imageNamed:@"shadow"] forState:UIControlStateNormal];
+		[_snapped setBackgroundImage:[UIImage imageNamed:@"shadow_push"] forState:UIControlStateHighlighted];
+		
+		[_snapped setFrame:CGRectMake(10, 5, 70, 70)];
+		
+		
 				
 		_Genre=[[UILabel alloc]init];
 		_Genre.backgroundColor=[UIColor clearColor];
@@ -68,6 +75,7 @@
 		[_wrapper addSubview:_Genre];
 		[_wrapper addSubview:_location_text];
 		[_wrapper addSubview:_Logo];
+		[_wrapper addSubview:_snapped];
 		[self.contentView addSubview:_wrapper];
     }
     return self;

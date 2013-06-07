@@ -139,6 +139,8 @@
 	}
 	
 	cell.RadioName.text = object_draw.NamaRadio;
+	cell.snapped.tag=indexPath.row;
+	[cell.snapped addTarget:self action:@selector(snapped:) forControlEvents:UIControlEventTouchUpInside];
 	
 	cell.Genre.text = object_draw.Genre;
 	[cell.Logo setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.erdioo.com/icon/?id=%@",object_draw.IdRadio]]placeholderImage:[UIImage imageNamed:@"placeholder"]];
@@ -156,6 +158,10 @@
 	//[self stream:[NSString stringWithFormat:@"%@",[object_draw.IdRadio]];
 	[self stream:object_draw.IdRadio];
 	
+}
+-(void)snapped:(id)sender{
+	NSLog(@"sender.tag--->%d",[sender tag]);
+
 }
 -(void)stream:(NSString*)radioNumber{
 	
