@@ -28,15 +28,31 @@
 		regional_radioList.backgroundColor=[UIColor clearColor];
 		regional_radioList.delegate=self;
 		regional_radioList.dataSource=self;
+		regional_radioList.hidden=YES;
 		[self.view addSubview:regional_radioList];
 		provinsi=[[NSMutableArray alloc]init];
-		[self fetchData];
+
+		spinner = [[TJSpinner alloc] initWithSpinnerType:kTJSpinnerTypeActivityIndicator];
+        spinner.hidesWhenStopped = YES;
+        [spinner setColor:[UIColor colorWithRed:0.769 green:0.416 blue:0.31 alpha:1]];
+        [spinner setInnerRadius:10];
+        [spinner setOuterRadius:20];
+        [spinner setStrokeWidth:8];
+		[spinner setCenter:CGPointMake(160.0,180.0)];
+        [spinner setNumberOfStrokes:8];
+        [spinner setPatternLineCap:kCGLineCapButt];
+        [spinner setPatternStyle:TJActivityIndicatorPatternStyleBox];
+		
+		
+		[self.view addSubview:spinner];
 		
     }
     return self;
 }
 -(void)fetchData{
 	[provinsi removeAllObjects];
+	regional_radioList.hidden=YES;
+	[spinner startAnimating];
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=getPropinsi&key=%@",Global_url,API_key];
 	NSLog(@"sURL--->%@",sURL);
 	
@@ -57,10 +73,13 @@
 			
 			[daerah release];
 		}
-		
+		[spinner stopAnimating];
+		regional_radioList.hidden=NO;
 		[regional_radioList reloadData];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
+			[spinner stopAnimating];
+			regional_radioList.hidden=YES;
 		}
         NSLog(@"error: %@", [error description]);
 		
@@ -92,6 +111,7 @@
 		cell.contentView.backgroundColor=[UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1];
 	}
 	
+	cell.Group.hidden=YES;
 	cell.NamaDaerah.text=object_draw.NamaPropinsi;
 	cell.JumlahRadio.text=[NSString stringWithFormat:@"%@ Radio",object_draw.JumlahRadio];
 	cell.selectionStyle=UITableViewCellEditingStyleNone;
@@ -120,6 +140,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
+			[self fetchData];
 }
 - (void)didReceiveMemoryWarning
 {

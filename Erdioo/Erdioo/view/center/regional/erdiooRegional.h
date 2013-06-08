@@ -12,6 +12,7 @@
 {
 	UITableView *regional_radioList;
 	NSMutableArray *provinsi;
+	TJSpinner *spinner;
 	
 }
 @end

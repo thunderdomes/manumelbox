@@ -51,8 +51,6 @@
 		
 		[self.view addSubview:erdiooCenter_table];
 		
-		[self fetchData];
-		
 		UIImage* image = [UIImage imageNamed:@"left"];
 		CGRect frame = CGRectMake(-5, 0, 44, 44);
 		UIButton* leftbutton = [[UIButton alloc] initWithFrame:frame];
@@ -103,6 +101,7 @@
 }
 -(void)fetchData{
 	[spinner startAnimating];
+	[erdiooCenter_table setHidden:YES];
 	[erdio removeAllObjects];
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=mostviewed&key=%@",Global_url,API_key];
 	NSLog(@"sURL--->%@",sURL);
@@ -127,6 +126,8 @@
 		[erdiooCenter_table setHidden:NO];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
+			[erdiooCenter_table setHidden:YES];
+			[spinner stopAnimating];
 		}
         NSLog(@"error: %@", [error description]);
 		
@@ -253,7 +254,7 @@
 -(void)viewWillAppear:(BOOL)animated{
 	
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
-	
+	[self fetchData];
 }
 - (void)didReceiveMemoryWarning
 {

@@ -39,14 +39,32 @@
 		
 		[self.view addSubview:regional_table];
 		
+		spinner = [[TJSpinner alloc] initWithSpinnerType:kTJSpinnerTypeActivityIndicator];
+        spinner.hidesWhenStopped = YES;
+        [spinner setColor:[UIColor colorWithRed:0.769 green:0.416 blue:0.31 alpha:1]];
+        [spinner setInnerRadius:10];
+        [spinner setOuterRadius:20];
+        [spinner setStrokeWidth:8];
+		[spinner setCenter:CGPointMake(160.0,180.0)];
+        [spinner setNumberOfStrokes:8];
+        [spinner setPatternLineCap:kCGLineCapButt];
+		//        [spinner setSegmentImage:[UIImage imageNamed:@"Stick.jpeg"]];
+        [spinner setPatternStyle:TJActivityIndicatorPatternStyleBox];
+		
+		
+		[self.view addSubview:spinner];
+
+		
     }
     return self;
 }
 -(void)viewWillAppear:(BOOL)animated{
 	self.title=self.NamaPropinsi;
 	[self fetchData:self.idPropinsi];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar3] forBarMetrics:UIBarMetricsDefault];
 }
 -(void)fetchData:(NSString*)idPropinsi{
+	[spinner startAnimating];
 	[regional removeAllObjects];
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=listPropinsi&id=%@&key=%@",Global_url,idPropinsi,API_key];
 	NSLog(@"sURL--->%@",sURL);
@@ -68,10 +86,13 @@
 			
 			[radioDaerah release];
 		}
-		
+		[spinner stopAnimating];
+		[regional_table setHidden:NO];
 		[regional_table reloadData];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
+			regional_table.hidden=YES;
+			[spinner stopAnimating];
 		}
         NSLog(@"error: %@", [error description]);
 		
