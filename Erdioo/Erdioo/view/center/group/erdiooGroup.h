@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface erdiooGroup : UIViewController
+@interface erdiooGroup : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+	UITableView *group;
+	NSMutableArray *groupList;
+	UIButton *backButton;
+}
 
 @end

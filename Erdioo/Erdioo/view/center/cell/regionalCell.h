@@ -13,6 +13,7 @@
 @property(nonatomic,strong) UILabel *JumlahRadio;
 @property(nonatomic,strong) UILabel *radioText;
 @property(nonatomic,strong) UIImageView *maps;
+@property(nonatomic,strong) UIImageView *Group;
 @property(nonatomic,strong) UIImageView *arrow;
 
 

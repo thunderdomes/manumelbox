@@ -36,5 +36,6 @@ extern NSString * const navbar;
 extern NSString * const arrow;
 extern NSString * const maps;
 extern NSString * const back;
+extern NSString * const groups;
 
 @end

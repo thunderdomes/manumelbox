@@ -110,6 +110,13 @@
 		[dataPass removeAllObjects];
 		[dataPass release];
 	}
+	if(indexPath.row==3){
+		[dataPass addObject:@"erdiooGroup"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[dataPass removeAllObjects];
+		[dataPass release];
+	}
 	[self.sidePanelController showCenterPanelAnimated:YES];
 	
 }
