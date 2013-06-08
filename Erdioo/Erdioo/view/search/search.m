@@ -29,7 +29,7 @@
 		searchResult.backgroundColor=[UIColor colorWithRed:0.957 green:0.957 blue:0.957 alpha:1];
 		//searchResult.dataSource=self;
 		searchResult.separatorColor=[UIColor colorWithRed:0.878 green:0.878 blue:0.878 alpha:1];
-
+		
 		
 		searchbarContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
 		searchbarContainer.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"searchbar"]];
@@ -41,7 +41,7 @@
 		searchForm.layer.sublayerTransform = CATransform3DMakeTranslation(5, 3, 0);
 		searchForm.leftViewMode = UITextFieldViewModeAlways;
 		searchForm.leftView = paddingView;
-		searchForm.placeholder=@"Search Song";
+		searchForm.placeholder=@"Cari Radio";
 		searchForm.delegate=self;
 		searchForm.clearButtonMode = UITextFieldViewModeWhileEditing;
 		
@@ -57,13 +57,40 @@
 		//[searchForm becomeFirstResponder];
 		searchResult.tableHeaderView=searchbarContainer;
 		[self.view addSubview: searchResult];
-
+		
 		
     }
     return self;
 }
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+	NSLog(@"shouldChangeCharactersInRange--->%@",textField.text);
+	return YES;
+}
+-(BOOL)textFieldShouldClear:(UITextField *)textField{
+	NSLog(@"textFieldShouldClear--->%@",textField.text);
+	return YES;
+	
+}
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+	NSLog(@"textFieldShouldBeginEditing--->%@",textField.text);
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 -(void)close{
-[self.navigationController dismissModalViewControllerAnimated:YES];
+	[self.navigationController dismissModalViewControllerAnimated:YES];
 }
 - (void)viewDidLoad
 {
@@ -72,7 +99,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
 	animated=YES;
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar3]  forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar]  forBarMetrics:UIBarMetricsDefault];
 	
 }
 - (void)didReceiveMemoryWarning
@@ -80,5 +107,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)dealloc{
+	[super dealloc];
+	[searchForm resignFirstResponder];
+}
 @end

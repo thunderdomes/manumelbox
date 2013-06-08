@@ -8,6 +8,7 @@
 
 #import "erdiooGroup.h"
 #import "regionalCell.h"
+#import "erdiooGroupDetail.h"
 @interface erdiooGroup ()
 
 @end
@@ -82,6 +83,8 @@
 		
 		[rightbarButton release];
 		[leftbarbutton release];
+		
+			[self fetchData];
 		
     }
     return self;
@@ -180,12 +183,19 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+	erdiooGroupDetail *detail=[[erdiooGroupDetail alloc]init];
+	groupRadio  *object_draw=[groupList objectAtIndex:indexPath.row];
+	detail.NamaPropinsi=object_draw.NamaGrup;
+	detail.idPropinsi=object_draw.IdGrup;
+	[self.navigationController pushViewController:detail animated:YES];
+	[detail release];
+
 }
 
 
 -(void)viewWillAppear:(BOOL)animated{
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
-	[self fetchData];
+
 }
 
 - (void)didReceiveMemoryWarning

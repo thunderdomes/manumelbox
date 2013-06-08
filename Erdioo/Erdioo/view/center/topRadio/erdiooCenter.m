@@ -85,6 +85,8 @@
 		
 		[rightbarButton release];
 		[leftbarbutton release];
+		[self fetchData];
+		[spinner startAnimating];
 		
 		
 		
@@ -102,7 +104,7 @@
 	
 }
 -(void)fetchData{
-	[spinner startAnimating];
+	
 	[erdiooCenter_table setHidden:YES];
 	[erdio removeAllObjects];
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=mostviewed&key=%@",Global_url,API_key];
@@ -182,13 +184,13 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	//topViewObject  *object_draw=[erdio objectAtIndex:indexPath.row];
+	topViewObject  *object_draw=[erdio objectAtIndex:indexPath.row];
 	
 	music_player=[[Player alloc]init];
 	[self.navigationController pushViewController:music_player animated:YES];
 	//[self stream:[NSString stringWithFormat:@"%@",[object_draw.IdRadio]];
 	
-	//[self stream:object_draw.IdRadio];
+	[self stream:object_draw.IdRadio];
 	
 }
 -(void)snapped:(id)sender{
@@ -242,7 +244,7 @@
 -(void)viewWillAppear:(BOOL)animated{
 	
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
-	[self fetchData];
+
 }
 - (void)didReceiveMemoryWarning
 {
