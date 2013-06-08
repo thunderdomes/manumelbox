@@ -32,4 +32,6 @@
 #import "JASidePanelController.h"
 #import "TJSpinner.h"
 
+#import "Player.h"
+
 #endif
