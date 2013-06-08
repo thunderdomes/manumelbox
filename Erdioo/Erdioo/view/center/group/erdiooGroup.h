@@ -13,6 +13,7 @@
 	UITableView *group;
 	NSMutableArray *groupList;
 	UIButton *backButton;
+	TJSpinner *spinner;
 }
 
 @end

@@ -1,44 +1,34 @@
 //
-//  search.m
+//  rightViewcontroller.m
 //  Erdioo
 //
-//  Created by Arie on 6/5/13.
+//  Created by Arie on 6/8/13.
 //  Copyright (c) 2013 kumel. All rights reserved.
 //
 
-#import "search.h"
+#import "rightViewcontroller.h"
 
-@interface search ()
+@interface rightViewcontroller ()
 
 @end
 
-@implementation search
+@implementation rightViewcontroller
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-		self.view.backgroundColor=[UIColor whiteColor];
-		
-		self.title=@"Cari Radio";
-		
     }
     return self;
 }
--(void)close{
-[self.navigationController dismissModalViewControllerAnimated:YES];
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
--(void)viewWillAppear:(BOOL)animated{
-	animated=YES;
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar3]  forBarMetrics:UIBarMetricsDefault];
-	
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
