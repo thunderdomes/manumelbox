@@ -29,8 +29,25 @@
 		erdiooCenter_table.dataSource=self;
 		[erdiooCenter_table setSeparatorColor:[UIColor colorWithRed:0.875 green:0.875 blue:0.875 alpha:1]];
 		erdiooCenter_table.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-44);
+		erdiooCenter_table.hidden=YES;
 		//[erdiooCenter_table setSeparatorColor:[UIColor clearColor]];
-		erdiooCenter_table.backgroundColor=[UIColor clearColor];
+
+		spinner = [[TJSpinner alloc] initWithSpinnerType:kTJSpinnerTypeActivityIndicator];
+        spinner.hidesWhenStopped = YES;
+        [spinner setColor:[UIColor colorWithRed:0.769 green:0.416 blue:0.31 alpha:1]];
+        [spinner setInnerRadius:10];
+        [spinner setOuterRadius:20];
+        [spinner setStrokeWidth:8];
+		[spinner setCenter:CGPointMake(160.0,180.0)];
+        [spinner setNumberOfStrokes:8];
+        [spinner setPatternLineCap:kCGLineCapButt];
+		//        [spinner setSegmentImage:[UIImage imageNamed:@"Stick.jpeg"]];
+        [spinner setPatternStyle:TJActivityIndicatorPatternStyleBox];
+		
+		
+		[self.view addSubview:spinner];
+
+		
 		
 		[self.view addSubview:erdiooCenter_table];
 		
@@ -85,6 +102,7 @@
 	
 }
 -(void)fetchData{
+	[spinner startAnimating];
 	[erdio removeAllObjects];
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=mostviewed&key=%@",Global_url,API_key];
 	NSLog(@"sURL--->%@",sURL);
@@ -104,8 +122,9 @@
 			
 			[topView release];
 		}
-		
+		[spinner stopAnimating];
 		[erdiooCenter_table reloadData];
+		[erdiooCenter_table setHidden:NO];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
 		}
@@ -151,7 +170,12 @@
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	return  79;
+	
+	CGFloat cellHeight = 79;
+	if (indexpath_now==indexPath.row) {
+		cellHeight = 130;
+	}
+	return cellHeight;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -162,17 +186,23 @@
 }
 -(void)snapped:(id)sender{
 	
+	UIButton* button = (UIButton*)sender;
+	//UIButton* button2 = (UIButton*)indexpath_now;
+ 
 	if(indexpath_now==[sender tag]){
-		NSLog(@"nilai indexpath_now sebelumnya-->%d",indexpath_now);
 		indexpath_now=-1;
-		NSLog(@"nilai indexpath_now-->%d",indexpath_now);
+		button.selected = !button.selected;
+		//button2.selected=!button2.selected;
+		[erdiooCenter_table beginUpdates];
+		[erdiooCenter_table endUpdates];
 	
 	}
 	else{
-		NSLog(@"nilai indexpath_now sebelumnya-->%d",indexpath_now);
 		indexpath_now=[sender tag];
-		
-		NSLog(@"nilai indexpath_now-->%d",indexpath_now);
+		   button.selected = !button.selected;
+		//button2.selected=!button2.selected;
+		[erdiooCenter_table beginUpdates];
+		[erdiooCenter_table endUpdates];
 	}
 	
 }

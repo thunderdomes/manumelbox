@@ -77,6 +77,7 @@
 		[_wrapper addSubview:_Logo];
 		[_wrapper addSubview:_snapped];
 		[self.contentView addSubview:_wrapper];
+		[self.contentView setBackgroundColor:[UIColor blackColor]];
     }
     return self;
 }
@@ -84,6 +85,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
+	[_snapped setBackgroundImage:[UIImage imageNamed:@"shadow_push"] forState:UIControlStateSelected];
 
     // Configure the view for the selected state
 }
