@@ -23,7 +23,7 @@
 		self.view.backgroundColor=darkest;
 		
         // Custom initialization
-		now_playing=[[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-93, 320, 93)];
+		now_playing=[[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-50, 320, 50)];
 		now_playing.backgroundColor=[UIColor colorWithRed:0.075 green:0.082 blue:0.098 alpha:1];
 		
 		leftMenu=[[UITableView alloc]init];
