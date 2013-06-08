@@ -58,6 +58,10 @@
 		self.viewController.centerPanel =nil;
 		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdioomy alloc] init]];
 	}
+	else if([[dict objectAtIndex:0] isEqualToString:@"erdiooGroup"]){
+		self.viewController.centerPanel =nil;
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdiooGroup alloc] init]];
+	}
 	
 }
 - (void)applicationWillResignActive:(UIApplication *)application

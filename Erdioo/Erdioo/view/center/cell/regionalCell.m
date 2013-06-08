@@ -15,6 +15,7 @@
 @synthesize radioText=_radioText;
 @synthesize maps=_maps;
 @synthesize arrow=_arrow;
+@synthesize Group=_Group;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -25,7 +26,6 @@
 		_NamaDaerah.backgroundColor=[UIColor clearColor];
 		_NamaDaerah.font=global_font_bold;
 		_NamaDaerah.textColor=dark_gray;
-		//_NamaDaerah.backgroundColor=[UIColor redColor];
 		
 		_radioText=[[UILabel alloc]init];
 		_radioText.backgroundColor=[UIColor clearColor];
@@ -47,6 +47,10 @@
 		_maps.frame=CGRectMake(3, 10, 44, 44);
 		//_maps.backgroundColor=[UIColor yellowColor];
 		
+		_Group=[[UIImageView alloc]initWithImage:[UIImage imageNamed:groups]];
+		_Group.frame=CGRectMake(3, 10, 44, 44);
+
+		
 		_arrow=[[UIImageView alloc]initWithImage:[UIImage imageNamed:arrow]];
 		_arrow.frame=CGRectMake(290, 10, 44, 44);
 		//_arrow.backgroundColor=[UIColor blackColor];
@@ -58,6 +62,7 @@
 		[self.contentView addSubview:_radioText];
 		[self.contentView addSubview:_JumlahRadio];
 		[self.contentView addSubview:_maps];
+		[self.contentView addSubview:_Group];
 		[self.contentView addSubview:_arrow];
     }
     return self;

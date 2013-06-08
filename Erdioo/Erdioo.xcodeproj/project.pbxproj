@@ -90,6 +90,8 @@
 		D09E9DE51762DA3900C1D786 /* TJSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = D09E9DE41762DA3900C1D786 /* TJSpinner.m */; };
 		D09E9DE81762E24000C1D786 /* navbarR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09E9DE61762E24000C1D786 /* navbarR@2x.png */; };
 		D09E9DE91762E24000C1D786 /* navbarL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09E9DE71762E24000C1D786 /* navbarL@2x.png */; };
+		D09E9DEC1762ECCF00C1D786 /* groupRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = D09E9DEB1762ECCF00C1D786 /* groupRadio.m */; };
+		D09E9DEE1762EF1C00C1D786 /* groups_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09E9DED1762EF1C00C1D786 /* groups_icon@2x.png */; };
 		D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC4175DACF5008A7F81 /* UIKit.framework */; };
 		D0C35AC7175DACF5008A7F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC6175DACF5008A7F81 /* Foundation.framework */; };
 		D0C35AC9175DACF5008A7F81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C35AC8175DACF5008A7F81 /* CoreGraphics.framework */; };
@@ -242,6 +244,9 @@
 		D09E9DE41762DA3900C1D786 /* TJSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSpinner.m; sourceTree = "<group>"; };
 		D09E9DE61762E24000C1D786 /* navbarR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbarR@2x.png"; sourceTree = "<group>"; };
 		D09E9DE71762E24000C1D786 /* navbarL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbarL@2x.png"; sourceTree = "<group>"; };
+		D09E9DEA1762ECCF00C1D786 /* groupRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groupRadio.h; sourceTree = "<group>"; };
+		D09E9DEB1762ECCF00C1D786 /* groupRadio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = groupRadio.m; sourceTree = "<group>"; };
+		D09E9DED1762EF1C00C1D786 /* groups_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups_icon@2x.png"; sourceTree = "<group>"; };
 		D0C35AC1175DACF5008A7F81 /* Erdioo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erdioo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C35AC4175DACF5008A7F81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0C35AC6175DACF5008A7F81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -601,6 +606,7 @@
 				D09E9DE71762E24000C1D786 /* navbarL@2x.png */,
 				D09E9DC817622F8C00C1D786 /* back@2x.png */,
 				D09E9DC1176227EB00C1D786 /* map@2x.png */,
+				D09E9DED1762EF1C00C1D786 /* groups_icon@2x.png */,
 				D09E9DB11761CCBE00C1D786 /* logo@2x.png */,
 				D09E9DD317623EA800C1D786 /* 1@2x.png */,
 				D09E9DCE17623E1400C1D786 /* 0@2x.png */,
@@ -665,6 +671,8 @@
 				D072668A175E463F00BA64C0 /* topViewObject.m */,
 				D09E9DBE176220C200C1D786 /* provinsiObject.h */,
 				D09E9DBF176220C200C1D786 /* provinsiObject.m */,
+				D09E9DEA1762ECCF00C1D786 /* groupRadio.h */,
+				D09E9DEB1762ECCF00C1D786 /* groupRadio.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -759,6 +767,7 @@
 				D09E9DE117624E1300C1D786 /* shadow@2x.png in Resources */,
 				D09E9DE81762E24000C1D786 /* navbarR@2x.png in Resources */,
 				D09E9DE91762E24000C1D786 /* navbarL@2x.png in Resources */,
+				D09E9DEE1762EF1C00C1D786 /* groups_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +834,7 @@
 				D09E9DC0176220C200C1D786 /* provinsiObject.m in Sources */,
 				D09E9DC717622DFE00C1D786 /* RadioRegional.m in Sources */,
 				D09E9DE51762DA3900C1D786 /* TJSpinner.m in Sources */,
+				D09E9DEC1762ECCF00C1D786 /* groupRadio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

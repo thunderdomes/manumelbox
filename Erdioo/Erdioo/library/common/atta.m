@@ -21,5 +21,7 @@ NSString * const navbar = @"navbar";
 NSString * const arrow =@"arrow";
 NSString * const maps =@"map";
 NSString * const back =@"back";
+NSString * const groups =@"groups_icon";
+
 
 @end
