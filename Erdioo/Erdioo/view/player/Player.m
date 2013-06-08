@@ -29,6 +29,9 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar3] forBarMetrics:UIBarMetricsDefault];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

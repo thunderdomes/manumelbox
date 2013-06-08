@@ -14,6 +14,7 @@
 	search *searchWindow;
 	NSInteger indexpath_now;
 	TJSpinner *spinner;
+	Player *music_player;
 }
 @property (nonatomic,strong)UITableView *erdiooCenter_table;
 @end
