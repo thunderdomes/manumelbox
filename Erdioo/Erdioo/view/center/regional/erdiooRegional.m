@@ -14,7 +14,6 @@
 @end
 
 @implementation erdiooRegional
-BOOL loaded=0;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -179,10 +178,7 @@ BOOL loaded=0;
 
 -(void)viewWillAppear:(BOOL)animated{
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
-	if(loaded==0){
 		[self fetchData];
-		loaded=1;
-	}
 }
 - (void)didReceiveMemoryWarning
 {
