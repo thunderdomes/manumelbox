@@ -13,6 +13,7 @@
 #import "erdioomy.h"
 #import "erdiooRegional.h"
 #import "erdioLeft.h"
+#import "search.h"
 @implementation AppDelegate
 
 - (void)dealloc
@@ -61,6 +62,10 @@
 	else if([[dict objectAtIndex:0] isEqualToString:@"erdiooGroup"]){
 		self.viewController.centerPanel =nil;
 		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[erdiooGroup alloc] init]];
+	}
+	else if([[dict objectAtIndex:0] isEqualToString:@"search"]){
+		self.viewController.centerPanel =nil;
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[search alloc] init]];
 	}
 	
 }

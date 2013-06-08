@@ -12,7 +12,7 @@
 {
 	UITableView *leftMenu;
 	NSMutableArray *menuLeft;
-	UIView *now_playing;
+	//UIView *now_playing;
 	
 }
 @end
