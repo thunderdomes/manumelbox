@@ -61,6 +61,7 @@
 -(void)viewWillAppear:(BOOL)animated{
 	self.title=self.NamaPropinsi;
 	[self fetchData:self.idPropinsi];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar3] forBarMetrics:UIBarMetricsDefault];
 }
 -(void)fetchData:(NSString*)idPropinsi{
 	[spinner startAnimating];

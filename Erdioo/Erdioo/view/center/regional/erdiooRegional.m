@@ -111,6 +111,7 @@
 		cell.contentView.backgroundColor=[UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1];
 	}
 	
+	cell.Group.hidden=YES;
 	cell.NamaDaerah.text=object_draw.NamaPropinsi;
 	cell.JumlahRadio.text=[NSString stringWithFormat:@"%@ Radio",object_draw.JumlahRadio];
 	cell.selectionStyle=UITableViewCellEditingStyleNone;
