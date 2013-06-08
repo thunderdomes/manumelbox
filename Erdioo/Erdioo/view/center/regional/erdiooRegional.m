@@ -28,6 +28,7 @@
 		regional_radioList.backgroundColor=[UIColor clearColor];
 		regional_radioList.delegate=self;
 		regional_radioList.dataSource=self;
+		regional_radioList.hidden=YES;
 		[self.view addSubview:regional_radioList];
 		provinsi=[[NSMutableArray alloc]init];
 		[self fetchData];
@@ -57,10 +58,11 @@
 			
 			[daerah release];
 		}
-		
+		regional_radioList.hidden=NO;
 		[regional_radioList reloadData];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
+			regional_radioList.hidden=YES;
 		}
         NSLog(@"error: %@", [error description]);
 		

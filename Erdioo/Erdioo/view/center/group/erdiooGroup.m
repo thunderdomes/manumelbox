@@ -78,6 +78,11 @@
 {
 	return groupList.count;
 }
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)] autorelease];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	groupRadio  *object_draw=[groupList objectAtIndex:indexPath.row];
