@@ -127,6 +127,8 @@
 		[erdiooCenter_table setHidden:NO];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
+			[erdiooCenter_table setHidden:YES];
+			[spinner stopAnimating];
 		}
         NSLog(@"error: %@", [error description]);
 		

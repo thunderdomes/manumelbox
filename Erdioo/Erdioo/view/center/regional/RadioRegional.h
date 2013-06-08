@@ -13,6 +13,7 @@
 	UITableView *regional_table;
 	NSMutableArray *regional;
 	UIButton *backButton;
+	TJSpinner *spinner;
 }
 @property(nonatomic,strong) NSString *idPropinsi;
 @property(nonatomic,strong) NSString *NamaPropinsi;
