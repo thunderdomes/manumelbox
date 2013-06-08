@@ -69,15 +69,28 @@
 		[playerController addSubview:separator2];
 		
 		NSLog(@"---------faram--->%f",self.view.frame.size.height);
-		if(self.view.frame.size.height==548){
+		imageRadio=[[UIImageView alloc]init];
+		imageRadio.layer.shadowColor = [UIColor blackColor].CGColor;
+		imageRadio.layer.shadowOffset = CGSizeMake(0, 1);
+		imageRadio.layer.shadowOpacity = 1;
+		imageRadio.layer.shadowRadius = 1.0;
+		imageRadio.clipsToBounds = NO;
 		
-			imageRadio=[[UIImageView alloc]initWithFrame:CGRectMake(5,15, 310, 310)];
-			[imageRadio setImage:[UIImage imageNamed:@"placeholder"]];
+		CALayer * l = [imageRadio layer];
+		[l setMasksToBounds:YES];
+		[l setCornerRadius:5];
+		
+		// You can even add a border
+		[l setBorderWidth:1.0];
+		[l setBorderColor:[[UIColor darkGrayColor] CGColor]];
+		
+		if(self.view.frame.size.height==548){
+			
+			imageRadio.frame=CGRectMake(10,15, 300, 300);
 			[self.view addSubview:imageRadio];
 		}
 		else{
-			imageRadio=[[UIImageView alloc]initWithFrame:CGRectMake(20,15, 280, 280)];
-			[imageRadio setImage:[UIImage imageNamed:@"placeholder"]];
+			imageRadio.frame=CGRectMake(20,15, 280, 280);
 			[self.view addSubview:imageRadio];
 		}
 		
@@ -106,10 +119,13 @@
 	[super viewDidLayoutSubviews];
 	radioName.text=_radioNameString;
 	RadioGenre.text=_radioGenreString;
+	
+	[self setImage:_radioId];
 
 
 }
 -(void)setImage:(NSString *)ImageId{
+	[imageRadio setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.erdioo.com/icon/?id=%@",ImageId]]placeholderImage:[UIImage imageNamed:@"placeholder"]];
 	
 }
 -(void)viewWillAppear:(BOOL)animated{

@@ -189,6 +189,7 @@
 	music_player=[[Player alloc]init];
 	music_player.radioName=object_draw.NamaRadio;
 	music_player.RadioGenre=object_draw.Genre;
+	music_player.radioId=object_draw.IdRadio;
 	
 	[self.navigationController pushViewController:music_player animated:YES];
 	//[self stream:[NSString stringWithFormat:@"%@",[object_draw.IdRadio]];
