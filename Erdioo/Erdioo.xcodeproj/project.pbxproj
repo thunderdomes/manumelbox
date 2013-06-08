@@ -107,6 +107,7 @@
 		D0C35ADB175DACF5008A7F81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C35ADA175DACF5008A7F81 /* Default-568h@2x.png */; };
 		D0C35AE9175DD3C1008A7F81 /* atta.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C35AE8175DD3C1008A7F81 /* atta.m */; };
 		D0F3272A17634170002A2E0B /* navbar_plain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F3272917634170002A2E0B /* navbar_plain@2x.png */; };
+		D0F3272E17634B87002A2E0B /* rightViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F3272D17634B87002A2E0B /* rightViewcontroller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -275,6 +276,8 @@
 		D0C35AE7175DD3C1008A7F81 /* atta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atta.h; sourceTree = "<group>"; };
 		D0C35AE8175DD3C1008A7F81 /* atta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = atta.m; sourceTree = "<group>"; };
 		D0F3272917634170002A2E0B /* navbar_plain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_plain@2x.png"; sourceTree = "<group>"; };
+		D0F3272C17634B87002A2E0B /* rightViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightViewcontroller.h; sourceTree = "<group>"; };
+		D0F3272D17634B87002A2E0B /* rightViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightViewcontroller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -683,6 +686,7 @@
 		D0C35AE5175DD315008A7F81 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D0F3272B17634B6C002A2E0B /* right */,
 				D09E9DEF1763017D00C1D786 /* player */,
 				D07266A4175E6AFD00BA64C0 /* search */,
 				D0726699175E618E00BA64C0 /* Left */,
@@ -716,6 +720,15 @@
 				D072668C175E4C2D00BA64C0 /* cell */,
 			);
 			path = center;
+			sourceTree = "<group>";
+		};
+		D0F3272B17634B6C002A2E0B /* right */ = {
+			isa = PBXGroup;
+			children = (
+				D0F3272C17634B87002A2E0B /* rightViewcontroller.h */,
+				D0F3272D17634B87002A2E0B /* rightViewcontroller.m */,
+			);
+			path = right;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -869,6 +882,7 @@
 				D09E9DE51762DA3900C1D786 /* TJSpinner.m in Sources */,
 				D09E9DEC1762ECCF00C1D786 /* groupRadio.m in Sources */,
 				D09E9DF2176301D700C1D786 /* Player.m in Sources */,
+				D0F3272E17634B87002A2E0B /* rightViewcontroller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
