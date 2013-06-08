@@ -83,6 +83,7 @@
 		[self.navigationItem setLeftBarButtonItem:leftbarbutton];
 		
 		[rightbarButton release];
+		[leftbarbutton release];
 		
 		
 		
