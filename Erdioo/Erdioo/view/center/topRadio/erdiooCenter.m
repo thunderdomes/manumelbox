@@ -13,6 +13,8 @@
 @end
 @implementation erdiooCenter
 @synthesize erdiooCenter_table;
+//checking isLoaded?
+BOOL isLoaded=0;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -240,7 +242,10 @@
 -(void)viewWillAppear:(BOOL)animated{
 	
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
-	[self fetchData];
+	if(isLoaded==0){
+		[self fetchData];
+		isLoaded=1;
+	}
 }
 - (void)didReceiveMemoryWarning
 {
