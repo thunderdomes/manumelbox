@@ -46,8 +46,50 @@
 		
 		[self.view addSubview:spinner];
 		
+		UIImage* image = [UIImage imageNamed:@"left"];
+		CGRect frame = CGRectMake(-5, 0, 44, 44);
+		UIButton* leftbutton = [[UIButton alloc] initWithFrame:frame];
+		[leftbutton setBackgroundImage:image forState:UIControlStateNormal];
+		//[leftbutton setBackgroundImage:[UIImage imageNamed:@"left-push"] forState:UIControlStateHighlighted];
+		[leftbutton addTarget:self action:@selector(lefbuttonPush) forControlEvents:UIControlEventTouchUpInside];
+		
+		UIView *leftbuttonView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
+		leftbuttonView.backgroundColor=[UIColor clearColor];
+		[leftbuttonView addSubview:leftbutton];
+		UIBarButtonItem* leftbarbutton = [[UIBarButtonItem alloc] initWithCustomView:leftbuttonView];
+		
+		
+		UIImage* image3 = [UIImage imageNamed:@"search"];
+		CGRect frame3 = CGRectMake(5, 0, 44, 44);
+		UIButton *searchbutton = [[UIButton alloc] initWithFrame:frame3];
+		[searchbutton setBackgroundImage:image3 forState:UIControlStateNormal];
+		//[searchbutton setBackgroundImage:[UIImage imageNamed:@"search-button-pressed"] forState:UIControlStateHighlighted];
+		//[searchbutton addTarget:self action:@selector(searchRadio) forControlEvents:UIControlEventTouchUpInside];
+		
+		UIView *RightbuttonView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
+		RightbuttonView.backgroundColor=[UIColor clearColor];
+		[RightbuttonView addSubview:searchbutton];
+		
+		
+		UIBarButtonItem* rightbarButton = [[UIBarButtonItem alloc] initWithCustomView:RightbuttonView];
+		
+		
+		[self.navigationItem setRightBarButtonItem:rightbarButton];
+		[self.navigationItem setLeftBarButtonItem:leftbarbutton];
+		
+		[rightbarButton release];
+		[leftbarbutton release];
+		
     }
     return self;
+}
+-(void)lefbuttonPush{
+	[self.sidePanelController showLeftPanelAnimated:YES];
+}
+-(void)searchRadio{
+	//UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:searchWindow];
+	//[self.navigationController presentModalViewController:navigationController animated:YES];
+	
 }
 -(void)fetchData{
 	[provinsi removeAllObjects];
