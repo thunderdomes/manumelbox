@@ -18,6 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+		
         // Custom initialization
 		UIButton *backButton = [[[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 44.0, 44.0)] autorelease];
 		[backButton setBackgroundImage:[UIImage imageNamed:back] forState:UIControlStateNormal];
@@ -25,6 +26,8 @@
 		UIBarButtonItem * backButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:backButton] autorelease];
 		
 		self.navigationItem.leftBarButtonItem = backButtonItem;
+		
+		self.view.backgroundColor=lightGray;
 
     }
     return self;

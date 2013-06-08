@@ -79,6 +79,9 @@
 		[rightbarButton release];
 		[leftbarbutton release];
 		
+		[self fetchData];
+		[spinner startAnimating];
+		
     }
     return self;
 }
@@ -178,7 +181,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
-		[self fetchData];
+
 }
 - (void)didReceiveMemoryWarning
 {

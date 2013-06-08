@@ -109,6 +109,8 @@
 		D0F3272A17634170002A2E0B /* navbar_plain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F3272917634170002A2E0B /* navbar_plain@2x.png */; };
 		D0F3272E17634B87002A2E0B /* rightViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F3272D17634B87002A2E0B /* rightViewcontroller.m */; };
 		D0F3273417636871002A2E0B /* searchbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F3273317636871002A2E0B /* searchbar@2x.png */; };
+		D0F3273617639C2C002A2E0B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F3273517639C2C002A2E0B /* AVFoundation.framework */; };
+		D0F3273917639E59002A2E0B /* erdiooGroupDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F3273817639E59002A2E0B /* erdiooGroupDetail.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -280,6 +282,9 @@
 		D0F3272C17634B87002A2E0B /* rightViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightViewcontroller.h; sourceTree = "<group>"; };
 		D0F3272D17634B87002A2E0B /* rightViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightViewcontroller.m; sourceTree = "<group>"; };
 		D0F3273317636871002A2E0B /* searchbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbar@2x.png"; sourceTree = "<group>"; };
+		D0F3273517639C2C002A2E0B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D0F3273717639E59002A2E0B /* erdiooGroupDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erdiooGroupDetail.h; sourceTree = "<group>"; };
+		D0F3273817639E59002A2E0B /* erdiooGroupDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erdiooGroupDetail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +292,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F3273617639C2C002A2E0B /* AVFoundation.framework in Frameworks */,
 				D09E9DBA1762163D00C1D786 /* SystemConfiguration.framework in Frameworks */,
 				D035A36D175F9F1600F5809B /* CoreData.framework in Frameworks */,
 				D0C35AC5175DACF5008A7F81 /* UIKit.framework in Frameworks */,
@@ -326,6 +332,8 @@
 			children = (
 				D035A30D175F934D00F5809B /* erdiooGroup.h */,
 				D035A30E175F934D00F5809B /* erdiooGroup.m */,
+				D0F3273717639E59002A2E0B /* erdiooGroupDetail.h */,
+				D0F3273817639E59002A2E0B /* erdiooGroupDetail.m */,
 			);
 			path = group;
 			sourceTree = "<group>";
@@ -567,6 +575,7 @@
 		D0C35AB8175DACF5008A7F81 = {
 			isa = PBXGroup;
 			children = (
+				D0F3273517639C2C002A2E0B /* AVFoundation.framework */,
 				D09E9DF91763101400C1D786 /* retina.png */,
 				D09E9DF717630FD800C1D786 /* small.png */,
 				D0C35ACA175DACF5008A7F81 /* Erdioo */,
@@ -887,6 +896,7 @@
 				D09E9DEC1762ECCF00C1D786 /* groupRadio.m in Sources */,
 				D09E9DF2176301D700C1D786 /* Player.m in Sources */,
 				D0F3272E17634B87002A2E0B /* rightViewcontroller.m in Sources */,
+				D0F3273917639E59002A2E0B /* erdiooGroupDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

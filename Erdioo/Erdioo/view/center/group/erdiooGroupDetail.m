@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 kumel. All rights reserved.
 //
 
-#import "RadioRegional.h"
+#import "erdiooGroupDetail.h"
 
-@interface RadioRegional ()
+@interface erdiooGroupDetail ()
 
 @end
 
-@implementation RadioRegional
+@implementation erdiooGroupDetail
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,17 +54,13 @@
 		
 		[self.view addSubview:spinner];
 		
-		
+	
     }
     return self;
 }
 -(void)viewWillAppear:(BOOL)animated{
+
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar3] forBarMetrics:UIBarMetricsDefault];
-}
--(void)viewDidLayoutSubviews{
-	[super viewDidLayoutSubviews];
-	self.title=self.NamaPropinsi;
-	[self fetchData:self.idPropinsi];
 }
 -(void)fetchData:(NSString*)idPropinsi{
 	[spinner startAnimating];
@@ -152,7 +148,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 	// Do any additional setup after loading the view.
+}
+-(void)viewDidLayoutSubviews{
+	[super viewDidLayoutSubviews];
+	self.title=self.NamaPropinsi;
+	[self fetchData:self.idPropinsi];
 }
 -(void)dealloc{
 	[super dealloc];

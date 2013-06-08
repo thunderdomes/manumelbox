@@ -23,9 +23,7 @@
 		self.Genre=[dictionary objectForKey:@"Genre"];
 		self.twitter=[dictionary objectForKey:@"twitter"];
 		self.Lokasi=[dictionary objectForKey:@"Lokasi"];
-		self.Logo=[dictionary objectForKey:@"Logo"];
-	
-				
+		self.Logo=[dictionary objectForKey:@"Logo"];			
 	}
 	return self;
 	
