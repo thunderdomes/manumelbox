@@ -187,6 +187,9 @@
 	topViewObject  *object_draw=[erdio objectAtIndex:indexPath.row];
 	
 	music_player=[[Player alloc]init];
+	music_player.radioName=object_draw.NamaRadio;
+	music_player.RadioGenre=object_draw.Genre;
+	
 	[self.navigationController pushViewController:music_player animated:YES];
 	//[self stream:[NSString stringWithFormat:@"%@",[object_draw.IdRadio]];
 	
