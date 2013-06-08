@@ -26,6 +26,7 @@
 		
 		group=[[UITableView alloc]init];
 		group.delegate=self;
+		group.hidden=YES;
 		group.dataSource=self;
 		[group setSeparatorColor:[UIColor colorWithRed:0.875 green:0.875 blue:0.875 alpha:1]];
 		group.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-44);
@@ -33,6 +34,20 @@
 		group.backgroundColor=[UIColor clearColor];
 		
 		[self.view addSubview:group];
+		spinner = [[TJSpinner alloc] initWithSpinnerType:kTJSpinnerTypeActivityIndicator];
+        spinner.hidesWhenStopped = YES;
+        [spinner setColor:[UIColor colorWithRed:0.769 green:0.416 blue:0.31 alpha:1]];
+        [spinner setInnerRadius:10];
+        [spinner setOuterRadius:20];
+        [spinner setStrokeWidth:8];
+		[spinner setCenter:CGPointMake(160.0,180.0)];
+        [spinner setNumberOfStrokes:8];
+        [spinner setPatternLineCap:kCGLineCapButt];
+        [spinner setPatternStyle:TJActivityIndicatorPatternStyleBox];
+		
+		
+		[self.view addSubview:spinner];
+
 		
 		UIImage* image = [UIImage imageNamed:@"left"];
 		CGRect frame = CGRectMake(-5, 0, 44, 44);
@@ -80,7 +95,10 @@
 	
 }
 -(void)fetchData{
+	group.hidden=YES;
 	[groupList removeAllObjects];
+	[spinner startAnimating];
+	
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=group&key=%@",Global_url,API_key];
 	NSLog(@"sURL--->%@",sURL);
 	
@@ -101,10 +119,13 @@
 			
 			[groups release];
 		}
-		
+		group.hidden=NO;
+		[spinner stopAnimating];
 		[group reloadData];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
+			group.hidden=YES;
+			[spinner stopAnimating];
 		}
         NSLog(@"error: %@", [error description]);
 		
@@ -158,13 +179,7 @@
 	// Do any additional setup after loading the view.
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"indexpat----->%d",indexPath.row);
-//	RadioRegional *regional=[[RadioRegional alloc]init];
-//	provinsiObject  *object_draw=[provinsi objectAtIndex:indexPath.row];
-//	regional.NamaPropinsi=object_draw.NamaPropinsi;
-//	regional.idPropinsi=object_draw.idPropinsi;
-//	[self.navigationController pushViewController:regional animated:YES];
-//	[regional release];
+
 }
 
 

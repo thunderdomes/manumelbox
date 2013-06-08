@@ -64,12 +64,12 @@
 		UIBarButtonItem* leftbarbutton = [[UIBarButtonItem alloc] initWithCustomView:leftbuttonView];
 		
 		
-		UIImage* image3 = [UIImage imageNamed:@"search"];
+		UIImage* image3 = [UIImage imageNamed:@"now_playing"];
 		CGRect frame3 = CGRectMake(50, 0, 44, 44);
 		UIButton *searchbutton = [[UIButton alloc] initWithFrame:frame3];
 		[searchbutton setBackgroundImage:image3 forState:UIControlStateNormal];
-		//[searchbutton setBackgroundImage:[UIImage imageNamed:@"search-button-pressed"] forState:UIControlStateHighlighted];
-		[searchbutton addTarget:self action:@selector(searchRadio) forControlEvents:UIControlEventTouchUpInside];
+		//[searchbutton setBackgroundImage:[UIImage imageNamed:@"now_playing_push"] forState:UIControlStateHighlighted];
+		//[searchbutton addTarget:self action:@selector(searchRadio) forControlEvents:UIControlEventTouchUpInside];
 		
 		UIView *RightbuttonView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 88, 44)];
 		RightbuttonView.backgroundColor=[UIColor clearColor];
