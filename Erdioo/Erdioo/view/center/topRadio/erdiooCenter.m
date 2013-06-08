@@ -191,26 +191,7 @@
 	
 }
 -(void)snapped:(id)sender{
-	
-	UIButton* button = (UIButton*)sender;
-	//UIButton* button2 = (UIButton*)indexpath_now;
- 
-	if(indexpath_now==[sender tag]){
-		indexpath_now=-1;
-		button.selected = !button.selected;
-		//button2.selected=!button2.selected;
-		[erdiooCenter_table beginUpdates];
-		[erdiooCenter_table endUpdates];
-	
-	}
-	else{
-		indexpath_now=[sender tag];
-		   button.selected = !button.selected;
-		//button2.selected=!button2.selected;
-		[erdiooCenter_table beginUpdates];
-		[erdiooCenter_table endUpdates];
-	}
-	
+		
 }
 -(void)stream:(NSString*)radioNumber{
 	
