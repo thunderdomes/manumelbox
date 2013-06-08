@@ -14,6 +14,7 @@
 	NSMutableArray *regional;
 	UIButton *backButton;
 	TJSpinner *spinner;
+    Player *music_player;
 }
 @property(nonatomic,strong) NSString *idPropinsi;
 @property(nonatomic,strong) NSString *NamaPropinsi;

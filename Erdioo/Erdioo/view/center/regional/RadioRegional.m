@@ -140,6 +140,11 @@
     view.backgroundColor = [UIColor clearColor];
     return view;
 }
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+	
+	music_player=[[Player alloc]init];
+	[self.navigationController pushViewController:music_player animated:YES];
+}
 - (void) goBack
 {
     [self.navigationController popViewControllerAnimated:YES];
