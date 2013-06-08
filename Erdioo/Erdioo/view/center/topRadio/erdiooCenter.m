@@ -181,7 +181,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	topViewObject  *object_draw=[erdio objectAtIndex:indexPath.row];
+	//topViewObject  *object_draw=[erdio objectAtIndex:indexPath.row];
 	
 	music_player=[[Player alloc]init];
 	[self.navigationController pushViewController:music_player animated:YES];
