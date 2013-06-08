@@ -19,7 +19,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-				groupList=[[NSMutableArray alloc]init];
+		self.title=@"Radio Group";
+		groupList=[[NSMutableArray alloc]init];
 		
 		self.view.backgroundColor=lightGray;
 		
