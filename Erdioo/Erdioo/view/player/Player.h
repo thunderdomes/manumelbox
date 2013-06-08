@@ -14,5 +14,13 @@
 	UIView *main_separators;
 	UIView *separator1;
 	UIView *separator2;
+	UILabel *radioName;
+	UILabel *RadioGenre;
+	UIImageView *imageRadio;
+	
+	UIView *banner;
 }
+@property (nonatomic,strong) NSString *radioName;
+@property (nonatomic,strong) NSString *RadioGenre;
+@property (nonatomic,strong) NSString *radioId;
 @end

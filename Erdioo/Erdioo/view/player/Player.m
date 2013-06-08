@@ -13,11 +13,37 @@
 @end
 
 @implementation Player
-
+@synthesize radioName=_radioNameString;
+@synthesize RadioGenre=_radioGenreString;
+@synthesize radioId=_radioId;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+		
+		// this will appear as the title in the navigation bar
+        radioName = [[[UILabel alloc] initWithFrame:CGRectMake(0,0,200,30)] autorelease];
+        radioName.backgroundColor = [UIColor clearColor];
+        radioName.font = global_font_bold;
+        radioName.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        radioName.textAlignment = NSTextAlignmentCenter;
+		radioName.lineBreakMode=NSLineBreakByCharWrapping;
+        radioName.textColor = [UIColor whiteColor]; // change this color
+
+		RadioGenre = [[[UILabel alloc] initWithFrame:CGRectMake(0,25,200,15)] autorelease];
+        RadioGenre.backgroundColor = [UIColor clearColor];
+        RadioGenre.font = global_font_medium_light;
+        RadioGenre.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        RadioGenre.textAlignment = NSTextAlignmentCenter;
+		RadioGenre.lineBreakMode=NSLineBreakByCharWrapping;
+        RadioGenre.textColor = [UIColor whiteColor]; // change this color
+		
+		UIView *iv = [[UIView alloc] initWithFrame:CGRectMake(0,0,200,44)];
+		[iv setBackgroundColor:[UIColor clearColor]];
+		
+		[iv addSubview:radioName];
+		[iv addSubview:RadioGenre];
+		self.navigationItem.titleView = iv;
 		
         // Custom initialization
 		UIButton *backButton = [[[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 44.0, 44.0)] autorelease];
@@ -42,8 +68,25 @@
 		[playerController addSubview:separator1];
 		[playerController addSubview:separator2];
 		
+		NSLog(@"---------faram--->%f",self.view.frame.size.height);
+		if(self.view.frame.size.height==548){
+		
+			imageRadio=[[UIImageView alloc]initWithFrame:CGRectMake(5,15, 310, 310)];
+			[imageRadio setImage:[UIImage imageNamed:@"placeholder"]];
+			[self.view addSubview:imageRadio];
+		}
+		else{
+			imageRadio=[[UIImageView alloc]initWithFrame:CGRectMake(20,15, 280, 280)];
+			[imageRadio setImage:[UIImage imageNamed:@"placeholder"]];
+			[self.view addSubview:imageRadio];
+		}
 		
 		
+		
+		banner=[[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-154, 320, 50)];
+		banner.backgroundColor=[UIColor blackColor];
+		
+		[self.view addSubview:banner];
 		[self.view addSubview:playerController];
 
     }
@@ -59,9 +102,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+-(void)viewDidLayoutSubviews{
+	[super viewDidLayoutSubviews];
+	radioName.text=_radioNameString;
+	RadioGenre.text=_radioGenreString;
 
+
+}
+-(void)setImage:(NSString *)ImageId{
+	
+}
 -(void)viewWillAppear:(BOOL)animated{
-[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar3] forBarMetrics:UIBarMetricsDefault];
+[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
 }
 - (void)didReceiveMemoryWarning
 {
