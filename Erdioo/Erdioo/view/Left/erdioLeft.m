@@ -23,6 +23,9 @@
 		self.view.backgroundColor=darkest;
 		
         // Custom initialization
+		now_playing=[[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-93, 320, 93)];
+		now_playing.backgroundColor=[UIColor colorWithRed:0.075 green:0.082 blue:0.098 alpha:1];
+		
 		leftMenu=[[UITableView alloc]init];
 		leftMenu.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 		leftMenu.backgroundColor=[UIColor clearColor];
@@ -31,7 +34,7 @@
 		leftMenu.tableHeaderView.frame=CGRectMake(0, 0, 320, 100);
 		leftMenu.delegate=self;
 		leftMenu.scrollEnabled=NO;
-		[self.view addSubview:leftMenu];
+		
 		
 		menuLeft=[[NSMutableArray alloc]init];
 		[menuLeft addObject:@"Top Radio"];
@@ -39,7 +42,12 @@
 		[menuLeft addObject:@"Regional Radio"];
 		[menuLeft addObject:@"Radio Group"];
 		[menuLeft addObject:@"News"];
+		
 		[menuLeft addObject:@"About Erdioo"];
+		[menuLeft addObject:@"Setting"];
+		
+		[self.view addSubview:leftMenu];
+		[self.view addSubview:now_playing];
     }
     return self;
 }
