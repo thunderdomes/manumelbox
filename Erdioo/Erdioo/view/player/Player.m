@@ -68,7 +68,6 @@
 		[playerController addSubview:separator1];
 		[playerController addSubview:separator2];
 		
-		NSLog(@"---------faram--->%f",self.view.frame.size.height);
 		imageRadio=[[UIImageView alloc]init];
 		imageRadio.layer.shadowColor = [UIColor blackColor].CGColor;
 		imageRadio.layer.shadowOffset = CGSizeMake(0, 1);
