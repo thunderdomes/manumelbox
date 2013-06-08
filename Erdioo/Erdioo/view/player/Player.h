@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface Player : UIViewController
-
+{
+	UIView *playerController;
+	UIView *main_separators;
+	UIView *separator1;
+	UIView *separator2;
+}
 @end

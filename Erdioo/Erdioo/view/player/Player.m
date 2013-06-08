@@ -28,6 +28,23 @@
 		self.navigationItem.leftBarButtonItem = backButtonItem;
 		
 		self.view.backgroundColor=lightGray;
+		main_separators=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 1)];
+		main_separators.backgroundColor=[UIColor colorWithRed:0.831 green:0.831 blue:0.831 alpha:1];
+		
+		separator1=[[UIView alloc]initWithFrame:CGRectMake(105, 0, 1, 60)];
+		separator1.backgroundColor=[UIColor colorWithRed:0.831 green:0.831 blue:0.831 alpha:1];
+		separator2=[[UIView alloc]initWithFrame:CGRectMake(210, 0, 1, 60)];
+		separator2.backgroundColor=[UIColor colorWithRed:0.831 green:0.831 blue:0.831 alpha:1];
+		
+		playerController=[[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-104, 320, 60)];
+		playerController.backgroundColor=[UIColor colorWithRed:0.937 green:0.937 blue:0.937 alpha:1];
+		[playerController addSubview:main_separators];
+		[playerController addSubview:separator1];
+		[playerController addSubview:separator2];
+		
+		
+		
+		[self.view addSubview:playerController];
 
     }
     return self;
