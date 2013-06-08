@@ -108,6 +108,7 @@
 		D0C35AE9175DD3C1008A7F81 /* atta.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C35AE8175DD3C1008A7F81 /* atta.m */; };
 		D0F3272A17634170002A2E0B /* navbar_plain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F3272917634170002A2E0B /* navbar_plain@2x.png */; };
 		D0F3272E17634B87002A2E0B /* rightViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F3272D17634B87002A2E0B /* rightViewcontroller.m */; };
+		D0F3273417636871002A2E0B /* searchbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F3273317636871002A2E0B /* searchbar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -278,6 +279,7 @@
 		D0F3272917634170002A2E0B /* navbar_plain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_plain@2x.png"; sourceTree = "<group>"; };
 		D0F3272C17634B87002A2E0B /* rightViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightViewcontroller.h; sourceTree = "<group>"; };
 		D0F3272D17634B87002A2E0B /* rightViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightViewcontroller.m; sourceTree = "<group>"; };
+		D0F3273317636871002A2E0B /* searchbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,6 +631,7 @@
 		D0C35AE2175DD315008A7F81 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				D0F3273317636871002A2E0B /* searchbar@2x.png */,
 				D09E9DF31763095E00C1D786 /* 6@2x.png */,
 				D09E9DE61762E24000C1D786 /* navbarR@2x.png */,
 				D09E9DE71762E24000C1D786 /* navbarL@2x.png */,
@@ -814,6 +817,7 @@
 				D09E9DFC176319BA00C1D786 /* now_playing@2x.png in Resources */,
 				D09E9DFE17631AC400C1D786 /* now_playing_push@2x.png in Resources */,
 				D0F3272A17634170002A2E0B /* navbar_plain@2x.png in Resources */,
+				D0F3273417636871002A2E0B /* searchbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +961,10 @@
 		D0C35ADF175DACF5008A7F81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Erdioo/Erdioo-Prefix.pch";
 				INFOPLIST_FILE = "Erdioo/Erdioo-Info.plist";
@@ -965,6 +973,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Erdioo/library/Flurry\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -973,6 +982,10 @@
 		D0C35AE0175DACF5008A7F81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Erdioo/Erdioo-Prefix.pch";
 				INFOPLIST_FILE = "Erdioo/Erdioo-Info.plist";
@@ -981,6 +994,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Erdioo/library/Flurry\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

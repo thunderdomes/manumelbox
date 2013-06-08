@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface search : UIViewController
-
+@interface search : UIViewController<UITextFieldDelegate>
+{
+	UIView *searchbarContainer;
+	UIView *paddingView;
+	UITextField *searchForm;
+	UITableView *searchResult;
+}
 @end

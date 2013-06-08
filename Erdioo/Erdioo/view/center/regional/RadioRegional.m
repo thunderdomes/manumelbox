@@ -140,6 +140,11 @@
     view.backgroundColor = [UIColor clearColor];
     return view;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	
+	music_player=[[Player alloc]init];
+	[self.navigationController pushViewController:music_player animated:YES];
+}
 - (void) goBack
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -152,9 +157,6 @@
 }
 -(void)dealloc{
 	[super dealloc];
-	[self.idPropinsi release];
-	[self.NamaPropinsi release];
-	[self.title release];
 	
 }
 - (void)didReceiveMemoryWarning

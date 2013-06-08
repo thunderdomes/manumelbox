@@ -13,6 +13,7 @@
 @end
 @implementation erdiooCenter
 @synthesize erdiooCenter_table;
+//checking isLoaded?
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -234,6 +235,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	[self fetchData];
 	
 	// Do any additional setup after loading the view.
 }

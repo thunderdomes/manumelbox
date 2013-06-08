@@ -14,7 +14,6 @@
 @end
 
 @implementation erdiooRegional
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -96,7 +95,6 @@
 	regional_radioList.hidden=YES;
 	[spinner startAnimating];
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=getPropinsi&key=%@",Global_url,API_key];
-	NSLog(@"sURL--->%@",sURL);
 	
 	NSURL *URL=[NSURL URLWithString:sURL];
 	NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
@@ -106,7 +104,6 @@
 	
     //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSLog(@"responseObject: %@", [responseObject objectForKey:@"data"]);
 		
 		
 		for(id erdioDict in [responseObject objectForKey:@"data"]){
@@ -170,7 +167,6 @@
 	// Do any additional setup after loading the view.
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"indexpat----->%d",indexPath.row);
 	RadioRegional *regional=[[RadioRegional alloc]init];
 	provinsiObject  *object_draw=[provinsi objectAtIndex:indexPath.row];
 	regional.NamaPropinsi=object_draw.NamaPropinsi;
@@ -182,7 +178,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navbar] forBarMetrics:UIBarMetricsDefault];
-			[self fetchData];
+		[self fetchData];
 }
 - (void)didReceiveMemoryWarning
 {

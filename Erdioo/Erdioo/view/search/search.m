@@ -23,6 +23,42 @@
 		
 		self.title=@"Cari Radio";
 		
+		searchResult=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-44)];
+		//searchResult.delegate=self;
+		searchResult.tableFooterView = [[[UIView alloc] init] autorelease];
+		searchResult.backgroundColor=[UIColor colorWithRed:0.957 green:0.957 blue:0.957 alpha:1];
+		//searchResult.dataSource=self;
+		searchResult.separatorColor=[UIColor colorWithRed:0.878 green:0.878 blue:0.878 alpha:1];
+
+		
+		searchbarContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+		searchbarContainer.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"searchbar"]];
+		paddingView = [[[UIView alloc] initWithFrame:CGRectMake(40, 0, 5, 20)] autorelease];
+		
+		
+		searchForm=[[UITextField alloc]initWithFrame:CGRectMake(30, 7, 280, 30)];
+		searchForm.backgroundColor=[UIColor clearColor];
+		searchForm.layer.sublayerTransform = CATransform3DMakeTranslation(5, 3, 0);
+		searchForm.leftViewMode = UITextFieldViewModeAlways;
+		searchForm.leftView = paddingView;
+		searchForm.placeholder=@"Search Song";
+		searchForm.delegate=self;
+		searchForm.clearButtonMode = UITextFieldViewModeWhileEditing;
+		
+		searchForm.autocorrectionType=UITextAutocorrectionTypeNo;
+		searchForm.leftViewMode = UITextFieldViewModeAlways;
+		searchForm.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+		[searchForm setFont:[UIFont fontWithName:@"OpenSans-Semibold" size:16]];
+		searchForm.textColor=[UIColor colorWithRed:0.275 green:0.275 blue:0.275 alpha:1] ;
+		searchForm.returnKeyType=UIReturnKeyDone;
+		
+		[searchbarContainer addSubview:searchForm];
+		
+		//[searchForm becomeFirstResponder];
+		searchResult.tableHeaderView=searchbarContainer;
+		[self.view addSubview: searchResult];
+
+		
     }
     return self;
 }
