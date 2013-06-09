@@ -47,7 +47,7 @@
 		
         // Custom initialization
 		UIButton *backButton = [[[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 44.0, 44.0)] autorelease];
-		[backButton setBackgroundImage:[UIImage imageNamed:back] forState:UIControlStateNormal];
+		[backButton setBackgroundImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
 		[backButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
 		UIBarButtonItem * backButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:backButton] autorelease];
 		
@@ -89,16 +89,16 @@
 			[self.view addSubview:imageRadio];
 		}
 		else{
-			imageRadio.frame=CGRectMake(20,15, 280, 280);
+			imageRadio.frame=CGRectMake(35,15, 250, 250);
 			[self.view addSubview:imageRadio];
 		}
 		
 		
 		
-		banner=[[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-154, 320, 50)];
+		banner=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
 		banner.backgroundColor=[UIColor blackColor];
 		
-		[self.view addSubview:banner];
+		//[self.view addSubview:banner];
 		[self.view addSubview:playerController];
 
     }
@@ -106,7 +106,9 @@
 }
 - (void) goBack
 {
-    [self.navigationController popViewControllerAnimated:YES];
+	AudioStreamer *stremaer = [[AudioStreamer alloc]init];
+	[stremaer stop];
+    [self.navigationController dismissModalViewControllerAnimated:YES];
     
 }
 - (void)viewDidLoad

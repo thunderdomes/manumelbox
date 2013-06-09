@@ -32,7 +32,8 @@
 #import "errdioCell.h"
 #import "JASidePanelController.h"
 #import "TJSpinner.h"
-
+#import <AVFoundation/AVAudioPlayer.h>
+#import <AVFoundation/AVAudioSession.h>
 #import "Player.h"
 
 
