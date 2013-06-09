@@ -142,7 +142,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	
 	music_player=[[Player alloc]init];
-	[self.navigationController pushViewController:music_player animated:YES];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:music_player];
+	[self.navigationController presentModalViewController:navigationController animated:YES];
 }
 - (void) goBack
 {

@@ -104,11 +104,10 @@
 	
 }
 -(void)fetchData{
-	
+		
 	[erdiooCenter_table setHidden:YES];
 	[erdio removeAllObjects];
 	NSString * sURL = [NSString stringWithFormat:@"%@?do=mostviewed&key=%@",Global_url,API_key];
-	NSLog(@"sURL--->%@",sURL);
 	
 	NSURL *URL=[NSURL URLWithString:sURL];
 	NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
@@ -118,7 +117,6 @@
 	
     //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSLog(@"responseObject: %@", [responseObject objectForKey:@"data"]);
 		for(id erdioDict in [responseObject objectForKey:@"data"]){
 			topViewObject *topView=[[topViewObject alloc] initWithDictionary:erdioDict];
 			[erdio addObject:topView];
@@ -137,6 +135,7 @@
 		
 	}];
 	[operation start];
+	NSLog(@"erdio.count;----->%d",erdio.count);
 	// [httpClient release];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -146,6 +145,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return erdio.count;
+
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -189,8 +189,9 @@
 	music_player=[[Player alloc]init];
 	music_player.radioName=object_draw.NamaRadio;
 	music_player.RadioGenre=object_draw.Genre;
-	
-	[self.navigationController pushViewController:music_player animated:YES];
+	music_player.radioId=object_draw.IdRadio;
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:music_player];
+	[self.navigationController presentModalViewController:navigationController animated:YES];
 	//[self stream:[NSString stringWithFormat:@"%@",[object_draw.IdRadio]];
 	
 	[self stream:object_draw.IdRadio];
@@ -224,9 +225,6 @@
 		
 		NSURL *url = [NSURL URLWithString:escapedValue];
 		AudioStreamer *stremaer = [[AudioStreamer alloc] initWithURL:url];
-		if([stremaer isPlaying]){
-			[stremaer stop];
-		}
 		[stremaer start];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
@@ -240,7 +238,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self fetchData];
 	
 	// Do any additional setup after loading the view.
 }

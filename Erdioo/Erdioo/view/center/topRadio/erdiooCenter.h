@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "search.h"
-@interface erdiooCenter : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface erdiooCenter : UIViewController<UITableViewDataSource,UITableViewDelegate,AVAudioPlayerDelegate>
 {
 	NSMutableArray *erdio;
 	search *searchWindow;
